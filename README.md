@@ -7,6 +7,7 @@ A windows only driver (UCP INSTALLER) for the laser is found here: [http://www.u
 Der er en række ting, man skal være opmærksom på ved brug af lasercutteren og dem kan du læse om lige her. 
 
 **Når du laver din fil i Illustrator**
+
 Inden du gør i gang, så hent skabelonen til Illustrator [her](https://github.com/DDlabAU/Laser-Cutter-Things/blob/master/VLS_6.60_Illustrator_Template.ait?raw=true). Den er sat op med de rigtige mål (450 mm. x 800 mm.) og farvepaletten er gjort klar til lasercutteren. Åbn den i Illustrator.
 
 Husk at dine streger/stroke skal sættes til 0,02 mm. Lasercutteren ser bort fra streger der er over 0,025 mm. så derfor er det vigtigt at huske dette. Husk at det er 0,02 mm og ikke pt. som er Illustrators standard. Illustrator ændrer automatisk til noget a la 0,0567 pt. og det er fint.
@@ -19,6 +20,7 @@ Hvis du ønsker at ‘vektorgravere’ skal du vælge ‘Blue’ samme sted. Det
 Når du har sikret dig at din stregtykkelse er 0,02mm. der hvor du vil skære er RGB rød (altså 255,0,0), der hvor du vil gravere er RGB sort (altså 0,0,0) og der hvor du vil vektorgravere er RGB blå (altså 0,0,255) kan du gemme din fil på en USB stick der kan læses af Windows, tage dit materiale under armen og gå over i Chomsky.
 
 **Når du skal lasercutte og færdes i prototyperummet**
+
 Der er en masse enten dyrt eller farligt udstyr i prototyperummet, så opfør dig forsigtigt derinde. Døren lukker heller ikke af sig selv altid, så luk den selv og undgå at alarmen går. Linsen på lasercutteren renses med linserens eller isopropylalkohol og en linserenseklud/linsepapir hvilket gøres af Lab Staff. Den koster 10.000 kr. og hvis den går i stykker kan andre ikke bruge lasercutteren, så derfor er det vigtigt at kontakte Mark Moore eller en anden fra Labtools hvis der er noget (inkl. dig selv eller andre) der ikke opfører sig normalt i prototyperummet. Det er ikke tilladt at lasercutte i klorholdige materialer, metal eller glas. Hvis du er i tvivl om noget, så spørg i DD Lab.
 
 Udsugningen skal ALTID være tændt, når der lasercuttes. Også selvom du bare graverer. Hvis der alligevel skulle gå ild i dit materiale, så forsøges ilden først slukket med spraydåsen med kølespray, der står ved lasercutteren. Hvis det ikke slukker ilden bruges skumslukkeren der hænger lige til højre for døren (og Labtools kontaktes naturligvis). Lasercutteren stopper automatisk, når du åbner den. For at genoptage det igangværende projekt trykkes på pauseknappen på lasercutteren. Hvis du trykker på start i stedet vil opgaven starte forfra.
