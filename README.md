@@ -10,7 +10,7 @@ Der er en række ting, man skal være opmærksom på ved brug af lasercutteren o
 
 Inden du gør i gang, så hent skabelonen til Illustrator [her](https://github.com/DDlabAU/Laser-Cutter-Things/blob/master/VLS_6.60_Illustrator_Template.ait?raw=true). Den er sat op med de rigtige mål (450 mm. x 800 mm.) og farvepaletten er gjort klar til lasercutteren. Åbn den i Illustrator.
 
-Husk at dine streger/stroke skal sættes til 0,02 mm. Lasercutteren ser bort fra streger der er over 0,025 mm. så derfor er det vigtigt at huske dette. Husk at det er 0,02 mm og ikke pt. som er Illustrators standard. Illustrator ændrer automatisk til noget a la 0,0567 pt. og det er fint.
+Husk at dine streger/stroke skal sættes til 0,02 mm. Lasercutteren ser bort fra streger der er over 0,025 mm. så derfor er det vigtigt at huske dette. Husk at det er 0,02 *mm* og ikke *pt.* som er Illustrators standard. Illustrator ændrer automatisk til noget a la 0,0567 pt. og det er fint.
 
 Det kan være svært at se så tynd en streg på skærmen, så tegn evt. med en tykkere streg og ændr når du er klar til at lasercutte. Du kan vælge alle ting med samme karakteristika (farve + stregytkkelse) ved at gå til Select —> Same —> Appearance i Illustrators menu. 
 
