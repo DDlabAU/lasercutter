@@ -6,6 +6,14 @@ A windows only driver (UCP INSTALLER) for the laser is found here: [http://www.u
 #Brug af lasercutteren i prototyperummet
 Der er en række ting, man skal være opmærksom på ved brug af lasercutteren og dem kan du læse om lige her. 
 
+**Inden du går i gang**
+
+Inden du går i gang er her et par ting, der er smart at huske på:
+- Du kan booke tid på lasercutterkalenderen, som du får adgang til, når du består prøven. Du finder den [her](https://www.google.com/calendar/embed?src=8p6892bhusumaecbbeg15rtosc%40group.calendar.google.com&ctz=Europe/Copenhagen).
+- Når du skærer i acryl, så vent med at tage beskyttelsesfilmen af så længe som muligt. Så bliver det pænere når du skærer, og dit materiale bliver ikke så nemt ridset.
+
+*Hvis du gør dig egne erfaringer eller har tips, så giv dem meget gerne videre til medstuderende og DD Lab*
+
 **Når du laver din fil i Illustrator**
 
 Inden du gør i gang, så hent skabelonen til Illustrator [her](https://github.com/DDlabAU/Laser-Cutter-Things/blob/master/VLS_6.60_Illustrator_Template.ait?raw=true). Den er sat op med de rigtige mål (450 mm. x 800 mm.) og farvepaletten er gjort klar til lasercutteren. Åbn den i Illustrator.
@@ -17,6 +25,7 @@ Det kan være svært at se så tynd en streg på skærmen, så tegn evt. med en 
 Stregfarven for de ting du skal skære skal være “RGB rød” hvilket du vælger ved at klikke på den lille pil til venstre for ‘Stroke’-teksten i menubaren øverst til venstre. Den er allerede kodet ind i femte række med mærkaten ‘Through cut’. Ved siden af den er den sorte farve. Den angiver du som fyld/fill på det område du vil have graveret.
 
 Hvis du ønsker at ‘vektorgravere’ skal du vælge ‘Blue’ samme sted. Det kan betale sig at vektorgravere hvis du har tynde streger som f.eks. på et landkort.
+
 Når du har sikret dig at din stregtykkelse er 0,02mm. der hvor du vil skære er RGB rød (altså 255,0,0), der hvor du vil gravere er RGB sort (altså 0,0,0) og der hvor du vil vektorgravere er RGB blå (altså 0,0,255) kan du gemme din fil på en USB stick der kan læses af Windows, tage dit materiale under armen og gå over i Chomsky.
 
 **Når du skal lasercutte og færdes i prototyperummet**
