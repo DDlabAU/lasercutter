@@ -30,7 +30,7 @@ Når du har sikret dig at din stregtykkelse er 0,02mm. der hvor du vil skære er
 
 **Når du skal lasercutte og færdes i prototyperummet**
 
-Der er en masse enten dyrt eller farligt udstyr i prototyperummet, så opfør dig forsigtigt derinde. Linsen på lasercutteren renses med linserens eller isopropylalkohol og en linserenseklud/linsepapir hvilket gøres af Lab Staff. Den koster 10.000 kr. og hvis den går i stykker kan andre ikke bruge lasercutteren, så derfor er det vigtigt at kontakte Mark Moore eller en anden fra Labtools hvis der er noget (inkl. dig selv eller andre) der ikke opfører sig normalt i prototyperummet. Det er ikke tilladt at lasercutte i klorholdige materialer, metal eller glas. Hvis du er i tvivl om noget, så spørg i DD Lab, eller spørg google.
+Der er en masse enten dyrt eller farligt udstyr i prototyperummet, så opfør dig forsigtigt derinde. Linsen på lasercutteren renses med linserens eller isopropylalkohol og en linserenseklud/linsepapir. Den koster 5.000 kr. og hvis den går i stykker kan andre ikke bruge lasercutteren, så derfor er det vigtigt at kontakte en DDlab eller Labtools medarbejder hvis der er noget (inkl. dig selv eller andre) der ikke opfører sig normalt i prototyperummet. Det er ikke tilladt at lasercutte i klorholdige materialer, metal eller glas. Hvis du er i tvivl om noget, så spørg i DD Lab, eller spørg google.
 
 **Tænd BEGGE udsugninger!**
 
