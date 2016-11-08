@@ -1,6 +1,6 @@
 Files and tools for the VLS 6.60 Laser cutter at Chomskylab which is partly owned by DDlab
 
-A windows only driver (UCP INSTALLER) for the laser is found here: [http://www.ulsinc.com/downloads/]
+A windows only driver (UCP INSTALLER) for the laser is found here: [https://www.ulsinc.com/en-us/support/software-downloads]
 
 
 #Brug af lasercutteren i prototyperummet
