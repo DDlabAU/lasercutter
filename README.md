@@ -1,11 +1,12 @@
 # Brug af lasercutteren i prototyperummet
 Der er en række ting, man skal være opmærksom på ved brug af lasercutteren og dem kan du læse om lige her.  
 For at få adgang til lasercutteren, skal du kontakte en ansat i DDlab, enten i åbningstiden eller på mail, og arrangere et kort introduktionskursus.
+Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal du producere til egen virksomhed eller projekter ud over studiet, bedes du i stedet gøre brug af faciliteterne på [godsbanen](http://godsbanen.dk/muligheder/godsbanens-aabne-vaerksteder/lasercutter/).
 
 ## Inden du går i gang
 
 Inden du går i gang er her et par ting, der er smart at huske på:
-- Du kan booke tid på lasercutterkalenderen, som du får adgang til, når du består prøven. Du finder den [her](https://www.google.com/calendar/embed?src=8p6892bhusumaecbbeg15rtosc%40group.calendar.google.com&ctz=Europe/Copenhagen).
+- Du kan booke tid på lasercutterkalenderen, som du får adgang til, når du består prøven. Du finder den [her](https://www.google.com/calendar/embed?src=8p6892bhusumaecbbeg15rtosc%40group.calendar.google.com&ctz=Europe/Copenhagen). Når du har booket tid, har du førsteret til lasercutteren og du er i din gode ret til at bede andre brugere om at afslutte deres projekter, så du kan komme til. Lad være med at booke længere tid end højest nødvendigt og bestreb dig på ikke at booke maskinen i længere end en time af gangen. Vi er mange der deles om den.
 - Når du skærer i acryl, så vent med at tage beskyttelsesfilmen af så længe som muligt. Så bliver det pænere når du skærer, og dit materiale bliver ikke så nemt ridset.
 - Hvis du vil undgå røgmærker på dit træ, så tape overfladen med malertape, inden du cutter.  
 
