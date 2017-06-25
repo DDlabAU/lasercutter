@@ -6,7 +6,7 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
 ## Inden du går i gang
 
 Inden du går i gang er her et par ting, der er smart at huske på:
-- Du kan booke tid på [lasercutterkalenderen](https://teamup.com/ksaoksap5dd29vbcdu). Når du har booket tid, har du førsteret til lasercutteren og du er i din gode ret til at bede andre brugere om at afslutte deres projekter, så du kan komme til. Lad være med at booke længere tid end højest nødvendigt og bestreb dig på ikke at booke maskinen i længere end en time af gangen. Vi er mange der deles om den.
+- Du kan booke tid på [lasercutterkalenderen](https://teamup.com/ksaoksap5dd29vbcdu). Når du har booket tid, har du førsteret til lasercutteren og du er i din gode ret til at bede andre brugere om at afslutte deres projekter, så du kan komme til. 
 - Når du skærer i acryl, så vent med at tage beskyttelsesfilmen af så længe som muligt. Så bliver det pænere når du skærer, og dit materiale bliver ikke så nemt ridset.
 - Hvis du vil undgå røgmærker på dit træ, så tape overfladen med malertape, inden du cutter.  
 
