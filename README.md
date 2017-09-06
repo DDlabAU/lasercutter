@@ -26,7 +26,7 @@ Hvis du ønsker at ‘vektorgravere’ skal du vælge ‘Blue’ samme sted. Det
 
 Når du har sikret dig at din stregtykkelse er 0,02mm. der hvor du vil skære er RGB rød (altså 255,0,0), der hvor du vil gravere er RGB sort (altså 0,0,0) og der hvor du vil vektorgravere er RGB blå (altså 0,0,255) kan du gemme din fil på en USB stick der kan læses af Windows, tage dit materiale under armen og gå over i Chomsky.
 
-Hvis du vil være sikker på at din fil kan læses ordentligt af lasercutteren, kan du, på din egen maskine, hente en [driver](https://www.ulsinc.com/en-us/support/software-downloads) til windows og tjekke efter. Under  `"Download Drivers for VLS, PLS and ILS Platforms"` vælger du `UCP Installer` og downloader og installerer driveren. Du kan nu 'printe' til lasercutteren fra illustrator, hvorefter kontrolpanelet til lasercutteren vil komme frem og du kan se hvordan den læser din fil.
+Hvis du vil være sikker på at din fil kan læses ordentligt af lasercutteren, kan du, på din egen maskine, hente en [driver](https://www.ulsinc.com/support/software-downloads) til windows og tjekke efter. Under  `"Download Drivers for VLS, PLS and ILS Platforms"` vælger du `UCP Installer` og downloader og installerer driveren. Du kan nu 'printe' til lasercutteren fra illustrator, hvorefter kontrolpanelet til lasercutteren vil komme frem og du kan se hvordan den læser din fil.
 
 
 ## Når du skal lasercutte og færdes i prototyperummet
