@@ -51,3 +51,5 @@ Hvis du skal bruge en kasse til din elektronik eller på anden måde i forbindel
 Når du efterfølgende eksporterer din PDF eller SVG-fil skal du åbne i Illustrator eller Inkscape og rette til.
 
 Husk på at der er tale om gratis værktøjer der er under udvikling. Tjek derfor altid at målene er som forventet i forhold til din materialetykkelse, inden du skærer dem.
+
+[Ansøg om adgang til lasercutteren](https://goo.gl/forms/SlW60lH60ulgC40k1)
