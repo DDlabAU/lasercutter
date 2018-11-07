@@ -31,7 +31,8 @@ Hvis du vil være sikker på at din fil kan læses ordentligt af lasercutteren, 
 
 ## Når du skal lasercutte og færdes i prototyperummet
 
-Der er en masse enten dyrt eller farligt udstyr i prototyperummet, så opfør dig forsigtigt derinde. Linsen på lasercutteren renses med linserens eller isopropylalkohol og en linserenseklud/linsepapir. Den koster 10.000 kr. og hvis den går i stykker kan andre ikke bruge lasercutteren, så derfor er det vigtigt at kontakte en DDlab eller Labtools medarbejder hvis der er noget (inkl. dig selv eller andre) der ikke opfører sig normalt i prototyperummet. Det er ikke tilladt at lasercutte i klorholdige materialer, metal eller glas. Hvis du er i tvivl om noget, så spørg i DD Lab, eller spørg google.
+Der er en masse enten dyrt eller farligt udstyr i prototyperummet, så opfør dig forsigtigt derinde. ~~Linsen på lasercutteren renses med linserens eller isopropylalkohol og en linserenseklud/linsepapir~~ Det er DD Lab der vedligeholder maskinen og renser linsen. Den koster 10.000 kr. og hvis den går i stykker kan andre ikke bruge lasercutteren, så derfor er det vigtigt at kontakte en DDlab medarbejder hvis der er problemer med laseren (så som at den ikke skærer igennem materialet på den rigtige indstilling). DD Lab kan kontaktes på ddlabau@gmail.com eller i personligt i lab'ets åbningstid. 
+Det er ikke tilladt at lasercutte i klorholdige materialer, metal eller glas. Hvis du er i tvivl om noget, så spørg i DD Lab, eller spørg google.
 
 Både BOFA Udsugningen (den store sorte der står ved siden af lasercutteren), udsugning til linsen (den under lasercutteren) og loft-udsugningen, skal ALTID være tændt, når der lasercuttes. Også selvom du bare graverer.  
 Hvis der, mod forventning, skulle gå ild i dit materiale, så forsøges ilden først slukket med spraydåsen med kølespray, der står ved lasercutteren, og, hvis det ikke er muligt, så med ildslukkeren.  
