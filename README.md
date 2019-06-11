@@ -1,3 +1,6 @@
+
+# https://forms.gle/C63LCHBYJXiDDpAr6
+
 # Brug af lasercutteren i prototyperummet
 Der er en række ting, man skal være opmærksom på ved brug af lasercutteren og dem kan du læse om lige her.  
 For at få adgang til lasercutteren, skal du kontakte en ansat i DDlab, enten i åbningstiden eller på mail, og arrangere et kort introduktionskursus.
@@ -6,7 +9,7 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
 ## Inden du går i gang
 
 Inden du går i gang er her et par ting, der er smart at huske på:
-- Du kan booke tid på [lasercutterkalenderen](https://teamup.com/ksaoksap5dd29vbcdu). Når du har booket tid, har du førsteret til lasercutteren og du er i din gode ret til at bede andre brugere om at afslutte deres projekter, så du kan komme til. 
+- Du kan booke tid på [lasercutterkalenderen](https://teamup.com/ksaoksap5dd29vbcdu). Når du har booket tid, har du førsteret til lasercutteren og du er i din gode ret til at bede andre brugere om at afslutte deres projekter, så du kan komme til.
 - Når du skærer i acryl, så vent med at tage beskyttelsesfilmen af så længe som muligt. Så bliver det pænere når du skærer, og dit materiale bliver ikke så nemt ridset.
 - Hvis du vil undgå røgmærker på dit træ, så tape overfladen med malertape, inden du cutter.  
 
@@ -31,7 +34,7 @@ Hvis du vil være sikker på at din fil kan læses ordentligt af lasercutteren, 
 
 ## Når du skal lasercutte og færdes i prototyperummet
 
-Der er en masse enten dyrt eller farligt udstyr i prototyperummet, så opfør dig forsigtigt derinde. ~~Linsen på lasercutteren renses med linserens eller isopropylalkohol og en linserenseklud/linsepapir~~ Det er DD Lab der vedligeholder maskinen og renser linsen. Den koster 10.000 kr. og hvis den går i stykker kan andre ikke bruge lasercutteren, så derfor er det vigtigt at kontakte en DDlab medarbejder hvis der er problemer med laseren (så som at den ikke skærer igennem materialet på den rigtige indstilling). DD Lab kan kontaktes på ddlabau@gmail.com eller i personligt i lab'ets åbningstid. 
+Der er en masse enten dyrt eller farligt udstyr i prototyperummet, så opfør dig forsigtigt derinde. ~~Linsen på lasercutteren renses med linserens eller isopropylalkohol og en linserenseklud/linsepapir~~ Det er DD Lab der vedligeholder maskinen og renser linsen. Den koster 10.000 kr. og hvis den går i stykker kan andre ikke bruge lasercutteren, så derfor er det vigtigt at kontakte en DDlab medarbejder hvis der er problemer med laseren (så som at den ikke skærer igennem materialet på den rigtige indstilling). DD Lab kan kontaktes på ddlabau@gmail.com eller i personligt i lab'ets åbningstid.
 Det er ikke tilladt at lasercutte i klorholdige materialer, metal eller glas. Hvis du er i tvivl om noget, så spørg i DD Lab, eller spørg google.
 
 Både BOFA Udsugningen (den store sorte der står ved siden af lasercutteren), udsugning til linsen (den under lasercutteren) og loft-udsugningen, skal ALTID være tændt, når der lasercuttes. Også selvom du bare graverer.  
