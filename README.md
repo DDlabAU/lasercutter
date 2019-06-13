@@ -1,4 +1,4 @@
-# Brug af lasercutteren i prototyperummet
+# Brug af Lasercutteren i DD Lab
 Der er en række ting, man skal være opmærksom på ved brug af lasercutteren og dem kan du læse om lige her.  
 
 For at få adgang til lasercutteren, skal du kontakte en ansat i DDLab, enten i åbningstiden eller på mail, og arrangere et kort introduktionskursus.
