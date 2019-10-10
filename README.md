@@ -7,7 +7,8 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
 
 ## Inden du går i gang
 
-Inden du går i gang, er her et par ting, der er smarte at huske på:
+Inden du går i gang, er her et par ting, der er smarte at huske på:  
+- Lasercutteren har et effektivt skæreområde på 700x500mm. Der er plads til materialer op til 710x510mm. Er dit materiale større end dette, skal du have skået det til inden. Brug evt. savene i groblab'et. 
 - Det er ikke muligt at reservere lasercutteren. Vær derfor ude i god tid når du skal skære, da maskinen kan være meget travl i perioder.  
 - Når du skærer i akryl, så vent med at tage beskyttelsesfilmen af så længe som muligt. Så bliver det pænere når du skærer og dit materiale bliver ikke så nemt ridset.
 - Hvis du vil undgå røgmærker på dit træ, så tape overfladen med malertape, inden du skærer.  
