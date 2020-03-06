@@ -2,4 +2,4 @@ theme: jekyll-theme-tactile
 title: Lasercutting i DD Lab
 description: Vejledning til brug af DD Labs lasercutter  
 logo: logo.jpg
-show_downloads: false
+show_downloads: true
