@@ -1,0 +1,34 @@
+{
+    "DeviceList": [
+        {
+            "Checklist": "",
+            "DefaultCutList": [
+            ],
+            "DefaultToolCutList": [
+            ],
+            "DisplayName": "Laser DD-Lab ",
+            "EnableLaser2Offset": false,
+            "EnableProcessOffset": false,
+            "GUID": "wMGZjLWRjZ",
+            "Height": 500,
+            "HomeOnStartup": true,
+            "Info": "",
+            "Laser2OffsetX": 0,
+            "Laser2OffsetY": 0,
+            "LastCamera": "",
+            "LastDevLibraryPath": "",
+            "MirrorX": true,
+            "MirrorY": true,
+            "Name": "Ruida",
+            "ProcessOffsetX": 0,
+            "ProcessOffsetY": 0,
+            "ReverseIntervalCompensation": false,
+            "Settings": {
+                "UserFinishX": 0,
+                "UserFinishY": 0
+            },
+            "Type": "Serial",
+            "Width": 700
+        }
+    ]
+}
