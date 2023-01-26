@@ -59,6 +59,26 @@
                 <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
+        <Entry Thickness="3.8000" Desc="Cut_copy">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Acryl/3.8000/Cut_copy"/>
+                <minPower Value="24"/>
+                <maxPower Value="45"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="8"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
+            </CutSetting>
+        </Entry>
     </Material>
     <Material name="Finer">
         <Entry Thickness="3.0000" Desc="Cut">
@@ -77,6 +97,8 @@
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
         <Entry Thickness="7.0000" Desc="Cut">
@@ -112,6 +134,8 @@
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
         <Entry Thickness="6.0000" Desc="Cut">
@@ -130,6 +154,8 @@
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
         <Entry Thickness="4.0000" Desc="Cut">
@@ -148,6 +174,8 @@
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
         <Entry Thickness="7.2000" Desc="Cut">
@@ -292,16 +320,18 @@
                 <name Value=""/>
                 <LinkPath Value="Karton/0.2500/Cut"/>
                 <minPower Value="9"/>
-                <maxPower Value="11"/>
+                <maxPower Value="18"/>
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
-                <speed Value="30"/>
+                <speed Value="40"/>
                 <PPI Value="0"/>
                 <perfLen Value="0.01"/>
                 <perfSkip Value="0.01"/>
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
         <Entry Thickness="0.2500" Desc="Cut Foldbar">
@@ -340,6 +370,8 @@
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
     </Material>
