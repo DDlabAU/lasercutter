@@ -5,7 +5,7 @@
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Acryl/3.0000/Cut"/>
+                <LinkPath Value="Acrylic (Akryl)/3.0000/Cut"/>
                 <minPower Value="9"/>
                 <maxPower Value="25"/>
                 <minPower2 Value="10"/>
@@ -25,7 +25,7 @@
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Acryl/3.0000/Cut Fast"/>
+                <LinkPath Value="Acrylic (Akryl)/3.0000/Cut Fast"/>
                 <minPower Value="9"/>
                 <maxPower Value="50"/>
                 <minPower2 Value="10"/>
@@ -43,7 +43,7 @@
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Acryl/3.8000/Cut"/>
+                <LinkPath Value="Acrylic (Akryl)/3.8000/Cut"/>
                 <minPower Value="24"/>
                 <maxPower Value="45"/>
                 <minPower2 Value="10"/>
@@ -63,7 +63,7 @@
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Acryl/3.8000/Cut_copy"/>
+                <LinkPath Value="Acrylic (Akryl)/3.8000/Cut_copy"/>
                 <minPower Value="24"/>
                 <maxPower Value="45"/>
                 <minPower2 Value="10"/>
@@ -80,233 +80,38 @@
             </CutSetting>
         </Entry>
     </Material>
-    <Material name="Plywood (Finer)">
-        <Entry Thickness="3.0000" Desc="Cut">
+    <Material name="Cardboard (Pap)">
+        <Entry Thickness="2.8000" Desc="Cut">
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Finer/3.0000/Cut"/>
-                <minPower Value="9"/>
+                <LinkPath Value="Cardboard (Pap)/2.8000/Cut"/>
                 <maxPower Value="20"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="11"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="7.0000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/7.0000/Cut"/>
-                <minPower Value="9"/>
-                <maxPower Value="45"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="11"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="-1.0000" Desc="Graver">
-            <CutSetting type="Scan">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/-1.0000/Graver"/>
-                <maxPower Value="20"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="300"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="6.0000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/6.0000/Cut"/>
-                <minPower Value="9"/>
-                <maxPower Value="35"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="11"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="4.0000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/4.0000/Cut"/>
-                <minPower Value="9"/>
-                <maxPower Value="30"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="11"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="7.2000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/7.2000/Cut"/>
-                <minPower Value="9"/>
-                <maxPower Value="45"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="11"/>
-                <startDelay Value="250"/>
-                <throughPower Value="50"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="9.0000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/9.0000/Cut"/>
-                <minPower Value="9"/>
-                <maxPower Value="55"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="11"/>
-                <startDelay Value="250"/>
-                <throughPower Value="50"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="3.8000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/3.8000/Cut"/>
-                <minPower Value="9"/>
-                <maxPower Value="25"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="11"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="3.8000" Desc="Cut Fast">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/3.8000/Cut Fast"/>
-                <minPower Value="9"/>
-                <maxPower Value="60"/>
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
                 <speed Value="40"/>
                 <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
+                <perfLen Value="0.11"/>
+                <perfSkip Value="0.11"/>
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
             </CutSetting>
         </Entry>
-        <Entry Thickness="6.0000" Desc="Cut Fast">
+        <Entry Thickness="2.8000" Desc="Cut Stiplet">
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Finer/6.0000/Cut Fast"/>
-                <minPower Value="9"/>
-                <maxPower Value="80"/>
+                <LinkPath Value="Cardboard (Pap)/2.8000/Cut Stiplet"/>
+                <minPower Value="25"/>
+                <maxPower Value="25"/>
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
-                <speed Value="20"/>
+                <speed Value="40"/>
                 <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="12.0000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/12.0000/Cut"/>
-                <minPower Value="80"/>
-                <maxPower Value="80"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="6"/>
-                <startDelay Value="250"/>
-                <throughPower Value="50"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="-1.0000" Desc="Graver let">
-            <CutSetting type="Scan">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Finer/-1.0000/Graver let"/>
-                <minPower Value="13.5"/>
-                <maxPower Value="13.5"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="300"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
+                <perforate Value="1"/>
+                <perfLen Value="1.5"/>
+                <perfSkip Value="0.5"/>
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
@@ -318,7 +123,7 @@
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Karton/0.2500/Cut"/>
+                <LinkPath Value="Cardstock (Karton)/0.2500/Cut"/>
                 <minPower Value="9"/>
                 <maxPower Value="18"/>
                 <minPower2 Value="10"/>
@@ -338,7 +143,7 @@
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Karton/0.2500/Cut Foldbar"/>
+                <LinkPath Value="Cardstock (Karton)/0.2500/Cut Foldbar"/>
                 <minPower Value="9"/>
                 <maxPower Value="11"/>
                 <minPower2 Value="10"/>
@@ -357,7 +162,7 @@
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Karton/0.2500/Cut Stiplet"/>
+                <LinkPath Value="Cardstock (Karton)/0.2500/Cut Stiplet"/>
                 <minPower Value="9"/>
                 <maxPower Value="13.5"/>
                 <minPower2 Value="10"/>
@@ -375,38 +180,233 @@
             </CutSetting>
         </Entry>
     </Material>
-    <Material name="Cardboard (Pap)">
-        <Entry Thickness="2.8000" Desc="Cut">
+    <Material name="Plywood (Finer)">
+        <Entry Thickness="3.0000" Desc="Cut">
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Pap/2.8000/Cut"/>
+                <LinkPath Value="Plywood (Finer)/3.0000/Cut"/>
+                <minPower Value="9"/>
                 <maxPower Value="20"/>
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
-                <speed Value="40"/>
+                <speed Value="11"/>
                 <PPI Value="0"/>
-                <perfLen Value="0.11"/>
-                <perfSkip Value="0.11"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="7.0000" Desc="Cut">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/7.0000/Cut"/>
+                <minPower Value="9"/>
+                <maxPower Value="45"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="11"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
             </CutSetting>
         </Entry>
-        <Entry Thickness="2.8000" Desc="Cut Stiplet">
+        <Entry Thickness="-1.0000" Desc="Engrave normal" NoThickTitle="Engrave">
+            <CutSetting type="Scan">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/-1.0000/Graver"/>
+                <maxPower Value="20"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="300"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="6.0000" Desc="Cut">
             <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Pap/2.8000/Cut Stiplet"/>
-                <minPower Value="25"/>
+                <LinkPath Value="Plywood (Finer)/6.0000/Cut"/>
+                <minPower Value="9"/>
+                <maxPower Value="35"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="11"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="4.0000" Desc="Cut">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/4.0000/Cut"/>
+                <minPower Value="9"/>
+                <maxPower Value="30"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="11"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="7.2000" Desc="Cut">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/7.2000/Cut"/>
+                <minPower Value="9"/>
+                <maxPower Value="45"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="11"/>
+                <startDelay Value="250"/>
+                <throughPower Value="50"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="9.0000" Desc="Cut">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/9.0000/Cut"/>
+                <minPower Value="9"/>
+                <maxPower Value="55"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="11"/>
+                <startDelay Value="250"/>
+                <throughPower Value="50"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="3.8000" Desc="Cut">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/3.8000/Cut"/>
+                <minPower Value="9"/>
                 <maxPower Value="25"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="11"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="3.8000" Desc="Cut Fast">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/3.8000/Cut Fast"/>
+                <minPower Value="9"/>
+                <maxPower Value="60"/>
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
                 <speed Value="40"/>
                 <PPI Value="0"/>
-                <perforate Value="1"/>
-                <perfLen Value="1.5"/>
-                <perfSkip Value="0.5"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="6.0000" Desc="Cut Fast">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/6.0000/Cut Fast"/>
+                <minPower Value="9"/>
+                <maxPower Value="80"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="20"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="12.0000" Desc="Cut">
+            <CutSetting type="Cut">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/12.0000/Cut"/>
+                <minPower Value="80"/>
+                <maxPower Value="80"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="6"/>
+                <startDelay Value="250"/>
+                <throughPower Value="50"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
+                <dotTime Value="1"/>
+                <overscan Value="0"/>
+                <priority Value="0"/>
+            </CutSetting>
+        </Entry>
+        <Entry Thickness="-1.0000" Desc="Engrave light" NoThickTitle="Engrave">
+            <CutSetting type="Scan">
+                <index Value="0"/>
+                <name Value=""/>
+                <LinkPath Value="Plywood (Finer)/-1.0000/Graver let"/>
+                <minPower Value="13.5"/>
+                <maxPower Value="13.5"/>
+                <minPower2 Value="10"/>
+                <maxPower2 Value="20"/>
+                <speed Value="300"/>
+                <PPI Value="0"/>
+                <perfLen Value="0.01"/>
+                <perfSkip Value="0.01"/>
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
