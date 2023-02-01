@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightBurnLibrary>
-    <Material name="Acryl">
+    <Material name="Acrylic (Akryl)">
         <Entry Thickness="3.0000" Desc="Cut">
             <CutSetting type="Cut">
                 <index Value="0"/>
@@ -80,7 +80,7 @@
             </CutSetting>
         </Entry>
     </Material>
-    <Material name="Finer">
+    <Material name="Plywood (Finer)">
         <Entry Thickness="3.0000" Desc="Cut">
             <CutSetting type="Cut">
                 <index Value="0"/>
@@ -313,7 +313,7 @@
             </CutSetting>
         </Entry>
     </Material>
-    <Material name="Karton">
+    <Material name="Cardstock (Karton)">
         <Entry Thickness="0.2500" Desc="Cut">
             <CutSetting type="Cut">
                 <index Value="0"/>
@@ -375,7 +375,7 @@
             </CutSetting>
         </Entry>
     </Material>
-    <Material name="Pap">
+    <Material name="Cardboard (Pap)">
         <Entry Thickness="2.8000" Desc="Cut">
             <CutSetting type="Cut">
                 <index Value="0"/>
