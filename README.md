@@ -55,14 +55,14 @@ Hvor mange farver du er nødt til at bruge afhænger helt af hvad du gerne vil s
 
 Skal du derimod både gravere og skære dit materiale i samme omgang, er du nødt til at bruge én farve til de former du vil skære og en anden farve til de former du vil gravere. Her er det selvfølgeligt også muligt at bruge forskellige farver til at gravere specifikke former lysere eller mørkere.
 
-Du indstiller farven på en form ved at markere formen og derefte klikke på en farve i bunden af vinduet. Når du har gjort det, vil du se din farve dukke op som et lag ude i højre side af vinduet.
+Du indstiller farven på en form ved at markere formen og derefter klikke på en farve i bunden af vinduet. Når du har gjort det, vil du se din farve dukke op som et lag ude i højre side af vinduet.
 
 #### Indstil skæreindstillinger
 Når du har givet din fil de nødvendige farver skal du sørge for at alle farverne/lagene har den korrekte skæreindstilling. Hvad den er, vil afhænge af hvilket materiale du arbejder på, tykkelsen på materialet og hvilket type cut du gerne vil lave (gennemskæring eller gravering).
 
 DDLab vedligeholder en samling af skæreindstillinger du kan bruge som udgangspunkt for dine egne indstillinger. På grund af slid af maskinen og små forskelle på materialerne der skæres, kan vi ikke garantere at indstillingerne skærer helt perfekt. Du bør derfor altid lave et mindre test-cut i dit materiale og derudfra justere indstillingerne så du opnår dit ønskede resultat.
 
-Du finder indstillingerne nederst i højre side af vinduet under fanen `Library`. De er indelt først i materialer, så i tykkelser og derefter vil nogle af dem også være indelt i hastighed. De langsomste hastigheder bør give de pæneste cuts. Graveringsindstillinger vil være under `-1.00` under det pågældende materiale.  
+Du finder indstillingerne nederst i højre side af vinduet under fanen `Library`. De er indelt først i materialer, så i tykkelser og derefter vil nogle af dem også være indelt i hastighed. De langsomste hastigheder bør give de pæneste cuts. Graveringsindstillinger vil være under `engrave` under det pågældende materiale. Der findes to niveauer af gravering, `engrave normal` og `engrave light`, alt efter hvor dybt/tydeligt du vil gravere i dit materiale.  
 Hvis `Library`-fanen er forsvundet, kan du genaktivere den ved øverst i vinduet at trykke på `Window` og derefter sætte et flueben ud foran `Library`.
 
 Du anvender skæreindstillingerne ved at markere den farve/det lag du vil indstille, så markerer du den ønskede indstilling og trykker på knappen `Assign to layer`.
