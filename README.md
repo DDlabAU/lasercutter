@@ -62,7 +62,7 @@ Når du har givet din fil de nødvendige farver skal du sørge for at alle farve
 
 DDLab vedligeholder en samling af skæreindstillinger du kan bruge som udgangspunkt for dine egne indstillinger. På grund af slid af maskinen og små forskelle på materialerne der skæres, kan vi ikke garantere at indstillingerne skærer helt perfekt. Du bør derfor altid lave et mindre test-cut i dit materiale og derudfra justere indstillingerne så du opnår dit ønskede resultat.
 
-Du finder indstillingerne nederst i højre side af vinduet under fanen `Library`. De er indelt først i materialer, så i tykkelser og derefter vil nogle af dem også være indelt i hastighed. De langsomste hastigheder bør give de pæneste cuts. Graveringsindstillinger vil være under `engrave` under det pågældende materiale. Der findes to niveauer af gravering, `engrave normal` og `engrave light`, alt efter hvor dybt/tydeligt du vil gravere i dit materiale.  
+Du finder indstillingerne nederst i højre side af vinduet under fanen `Library`. De er inddelt først i materialer, så i tykkelser. Graveringsindstillinger vil være under `engrave` under det pågældende materiale. Der findes to niveauer af gravering, `engrave normal` og `engrave light`, alt efter hvor dybt/tydeligt du vil gravere i dit materiale.  
 Hvis `Library`-fanen er forsvundet, kan du genaktivere den ved øverst i vinduet at trykke på `Window` og derefter sætte et flueben ud foran `Library`.
 
 Du anvender skæreindstillingerne ved at markere den farve/det lag du vil indstille, så markerer du den ønskede indstilling og trykker på knappen `Assign to layer`.
@@ -72,9 +72,9 @@ Når lasercutteren er i brug **SKAL** maskinen være under opsyn, da der er risi
 
 I rummet hvor lasercutteren står er der flere dyre og farlige maskiner. Opfør dig derfor forsigtigt og med respekt for maskinerne.
 
-Når du skærer skal alle udluftningerne **ALTID** være tændte. Du skal altså både aktivere knapperne på selve maskinen og den hvide boks til udsugningen i hjørnet af rummet.
+Når du skærer skal alle udluftningen **ALTID** være tændt. Du skal kun aktivere knapperne på selve maskinen, og du skal altså **ikke** indstille noget på den hvide boks til udsugningen i hjørnet af rummet.
 
-Hvis der, mod forventning, skulle gå ild i dit materiale, stopper du først maskinen ved at trykke på den store røde nødstop-knap, så forsøger du først at slukke ilden med spraydåsen med kølespray, der står ved lasercutteren, og, hvis det ikke er muligt, så med ildslukkeren.
+Hvis der, mod forventning, skulle gå ild i dit materiale, stopper du først maskinen ved at trykke på den store røde nødstop-knap, så forsøger du først at slukke ilden med spraydåsen med kølespray, der står ved lasercutteren, og, hvis det ikke er muligt, så med ildslukkeren. Se også sikkerhedsinstruktionerne over maskinen. 
 
 ## Vedligeholdelse af maskinen
 Det er kun DDLab-ansatte der må foretage vedligeholdelse af maskinen. Du bør derfor tage kontakt til en ansat, hvis du oplever problemer når du skal skære. Det kan du gøre personligt i lab'ets åbningstid eller på mail til ddlabau@gmail.com
