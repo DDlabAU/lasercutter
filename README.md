@@ -70,7 +70,7 @@ Du anvender skæreindstillingerne ved at markere den farve/det lag du vil indsti
 Hvis du skal gravere i akryl kan du med fordel lægge siden uden film opad da filmen ellers vil smelte lidt ned i graveringen. På billedet kan det ses hvordan graveringen vil se ud i de forskellige indstillinger og med/uden filmsiden opad. 
 
 ![](engraveAcrylic.png)
-*Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren*
+*Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren.*
 
 ## Når du skal skære
 Når lasercutteren er i brug **SKAL** maskinen være under opsyn, da der er risiko for, at der går ild i materialet. Det er altså ***ikke*** tilladt at forlade rummet imens maskinen er i gang med at skære.  
