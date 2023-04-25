@@ -376,10 +376,10 @@
             </CutSetting>
         </Entry>
         <Entry Thickness="-1.0000" Desc="Line engrave light" NoThickTitle="Engrave line">
-            <CutSetting type="Scan">
+            <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Plywood (Finer)/Engrave/Line engrave light"/>
+                <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave light"/>
                 <minPower Value="10"/>
                 <maxPower Value="15"/>
                 <minPower2 Value="10"/>
@@ -399,7 +399,7 @@
             <CutSetting type="Scan">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Plywood (Finer)/Engrave/Engrave normal_copy"/>
+                <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave dark"/>
                 <minPower Value="10"/>
                 <maxPower Value="20"/>
                 <minPower2 Value="10"/>
@@ -416,10 +416,10 @@
             </CutSetting>
         </Entry>
         <Entry Thickness="-1.0000" Desc="Line engrave dark" NoThickTitle="Engrave line">
-            <CutSetting type="Scan">
+            <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Plywood (Finer)/Engrave/Line engrave medium_copy"/>
+                <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave dark"/>
                 <minPower Value="15"/>
                 <maxPower Value="20"/>
                 <minPower2 Value="10"/>
@@ -436,10 +436,10 @@
             </CutSetting>
         </Entry>
         <Entry Thickness="-1.0000" Desc="Line engrave medium" NoThickTitle="Engrave line">
-            <CutSetting type="Scan">
+            <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
-                <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave light_copy"/>
+                <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave medium"/>
                 <minPower Value="10"/>
                 <maxPower Value="20"/>
                 <minPower2 Value="10"/>
