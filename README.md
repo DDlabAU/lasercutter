@@ -72,6 +72,11 @@ Hvis du skal gravere i akryl kan du med fordel lægge siden uden film opad da fi
 ![](engraveAcrylic.png)
 *Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren.*
 
+Hvis du skal gravere en eller flere linjer kan du bruge `Engrave line` indstillingerne under `Engrave` for de forskellige materialer (lige nu er der kun graverings indstillinger for linje for finer). Herunder kan du se hvordan gravering vil se ud i de tre forskellige indstillinger vi har (light, medium og dark). 
+
+![](lineengrave.png)
+*Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren.*
+
 ## Når du skal skære
 Når lasercutteren er i brug **SKAL** maskinen være under opsyn, da der er risiko for, at der går ild i materialet. Det er altså ***ikke*** tilladt at forlade rummet imens maskinen er i gang med at skære.  
 
