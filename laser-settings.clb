@@ -25,8 +25,8 @@
                 <index Value="0"/>
                 <name Value=""/>
                 <LinkPath Value="Acrylic (Akryl)/Engrave/Engrave light"/>
-                <minPower Value="15"/>
-                <maxPower Value="15"/>
+                <minPower Value="13.5"/>
+                <maxPower Value="13.5"/>
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
                 <speed Value="300"/>
@@ -36,8 +36,6 @@
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
         <Entry Thickness="3.0000" Desc="Cut">
@@ -70,46 +68,6 @@
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
                 <speed Value="8"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="1.5000" Desc="Cut">
-            <CutSetting type="Cut">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Acrylic (Akryl)/1.5000/Cut"/>
-                <minPower Value="14"/>
-                <maxPower Value="25"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="21"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="-1.0000" Desc="Engrave Dark" NoThickTitle="Engrave">
-            <CutSetting type="Scan">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Acrylic (Akryl)/Engrave/Engrave normal_copy"/>
-                <minPower Value="30"/>
-                <maxPower Value="30"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="300"/>
                 <PPI Value="0"/>
                 <perfLen Value="0.01"/>
                 <perfSkip Value="0.01"/>
@@ -284,11 +242,11 @@
                 <index Value="0"/>
                 <name Value=""/>
                 <LinkPath Value="Plywood (Finer)/6.0000/Cut"/>
-                <minPower Value="30"/>
-                <maxPower Value="40"/>
+                <minPower Value="9"/>
+                <maxPower Value="35"/>
                 <minPower2 Value="10"/>
                 <maxPower2 Value="20"/>
-                <speed Value="10"/>
+                <speed Value="11"/>
                 <PPI Value="0"/>
                 <perfLen Value="0.01"/>
                 <perfSkip Value="0.01"/>
@@ -397,6 +355,8 @@
                 <dotTime Value="1"/>
                 <overscan Value="0"/>
                 <priority Value="0"/>
+                <tabCount Value="1"/>
+                <tabCountMax Value="1"/>
             </CutSetting>
         </Entry>
         <Entry Thickness="-1.0000" Desc="Engrave light" NoThickTitle="Engrave">
@@ -418,7 +378,7 @@
             </CutSetting>
         </Entry>
         <Entry Thickness="-1.0000" Desc="Line engrave light" NoThickTitle="Engrave line">
-            <CutSetting type="Scan">
+            <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
                 <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave light"/>
@@ -458,7 +418,7 @@
             </CutSetting>
         </Entry>
         <Entry Thickness="-1.0000" Desc="Line engrave dark" NoThickTitle="Engrave line">
-            <CutSetting type="Scan">
+            <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
                 <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave dark"/>
@@ -478,7 +438,7 @@
             </CutSetting>
         </Entry>
         <Entry Thickness="-1.0000" Desc="Line engrave medium" NoThickTitle="Engrave line">
-            <CutSetting type="Scan">
+            <CutSetting type="Cut">
                 <index Value="0"/>
                 <name Value=""/>
                 <LinkPath Value="Plywood (Finer)/Engrave line/Line engrave medium"/>
@@ -487,46 +447,6 @@
                 <minPower2 Value="10"/>
                 <maxPower2 Value="15"/>
                 <speed Value="150"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="-1.0000" Desc="Engrave Dark" NoThickTitle="Engrave">
-            <CutSetting type="Scan">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Plywood (Finer)/Engrave/Engrave normal_copy"/>
-                <minPower Value="30"/>
-                <maxPower Value="30"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="300"/>
-                <PPI Value="0"/>
-                <perfLen Value="0.01"/>
-                <perfSkip Value="0.01"/>
-                <dotTime Value="1"/>
-                <overscan Value="0"/>
-                <priority Value="0"/>
-                <tabCount Value="1"/>
-                <tabCountMax Value="1"/>
-            </CutSetting>
-        </Entry>
-        <Entry Thickness="-1.0000" Desc="Engrave Extra Dark" NoThickTitle="Engrave">
-            <CutSetting type="Scan">
-                <index Value="0"/>
-                <name Value=""/>
-                <LinkPath Value="Plywood (Finer)/Engrave/Engrave Dark_copy"/>
-                <minPower Value="40"/>
-                <maxPower Value="40"/>
-                <minPower2 Value="10"/>
-                <maxPower2 Value="20"/>
-                <speed Value="300"/>
                 <PPI Value="0"/>
                 <perfLen Value="0.01"/>
                 <perfSkip Value="0.01"/>
