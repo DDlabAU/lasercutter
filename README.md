@@ -118,6 +118,14 @@ Husk på at der er tale om gratis værktøjer der er under udvikling. Tjek derfo
 
 ### Guides
 
-[Trace Image](https://docs.google.com/presentation/d/1d29kRin2b5o1rduTOiAI4QecXiaNsfKvVj5YhygZm_Y/edit?usp=sharing)
+[Trace Image med kamera](https://docs.google.com/presentation/d/1d29kRin2b5o1rduTOiAI4QecXiaNsfKvVj5YhygZm_Y/edit?usp=sharing)
+
+En kort guide til hurtigt og effektivt at overføre håndtegnede designs ind i Lightburn vha. kameraet inde i lasercutteren. 
 
 [Billedindgravering](https://docs.google.com/presentation/d/1jXhuIf8osP3unIowRO8HyUHixzTv9yZjyoUBdMxu2tM/edit?usp=sharing)
+
+En lille guide til indstilling af billeder vha. "Adjust Image" funktion, der gør det muligt at indgravere detaljerede billeder og fotoer. 
+
+[Ting alle med lasercutter kørekort SKAL vide](https://docs.google.com/document/d/194hD3mJoMfGWuLNzh1YbXGY8i5Xl2ATHYWU0qgb8bRE/edit?usp=sharing)
+
+Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus. 
