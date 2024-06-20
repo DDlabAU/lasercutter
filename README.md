@@ -1,3 +1,6 @@
+<span style="color:red">This text is red.</span>
+
+
 # Brug af Lasercutteren i DD Lab
 Der er en række ting, man skal være opmærksom på ved brug af lasercutteren og dem kan du læse om lige her.  
 
