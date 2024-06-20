@@ -5,6 +5,21 @@ For at få adgang til lasercutteren, skal du kontakte en ansat i DDLab, enten i 
 
 Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal du producere til egen virksomhed eller projekter ud over studiet, bedes du i stedet gøre brug af faciliteterne på [godsbanen](http://godsbanen.dk/godsbanens-aabne-vaerksteder/laser//).
 
+## Indhold
+
+- [Inden du går i gang](#inden-du-går-i-gang)
+- [Materialer](#materialer)
+- [Når du laver din fil](#når-du-laver-din-fil)
+  - [Tegn din fil direkte i Lightburn](#tegn-din-fil-direkte-i-lightburn)
+  - [Tegn din fil i et andet program](#tegn-din-fil-i-et-andet-program)
+  - [Indstil farver](#indstil-farver)
+  - [Indstil skæreindstillinger](#indstil-skæreindstillinger)
+- [Når du skal skære](#når-du-skal-skære)
+- [Vedligeholdelse af maskinen](#vedligeholdelse-af-maskinen)
+- [Vil du skære en kasse?](#vil-du-skære-en-kasse)
+
+
+
 ## Inden du går i gang
 
 Inden du går i gang, er her et par ting, der er smarte at huske på:  
