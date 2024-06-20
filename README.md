@@ -24,12 +24,14 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
 ## Inden du går i gang
 
 Inden du går i gang, er her et par ting, der er smarte at huske på:  
+
 - Lasercutteren har et effektivt skæreområde på 700x500mm. Der er plads til materialer op til 710x510mm. Er dit materiale større end dette, skal du have skåret det til inden. Brug evt. savene i grovlab'et. 
 - Det er ikke muligt at reservere lasercutteren. Vær derfor ude i god tid når du skal skære, da maskinen kan være meget travl i perioder.  
 - Når du skærer i akryl, så vent med at tage beskyttelsesfilmen af så længe som muligt, medmindre du skal gravere (se under [indstil skæreindstillinger](https://github.com/DDlabAU/lasercutter#indstil-skæreindstillinger)). Så bliver det pænere når du skærer og dit materiale bliver ikke så nemt ridset.
 - Hvis du vil undgå røgmærker på dit træ, så tape overfladen med malertape, inden du skærer.  
 
 *Hvis du gør dig egne erfaringer eller har tips, så giv dem meget gerne videre til medstuderende og DD Lab*
+
 
 ## Materialer
 Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). 
@@ -50,6 +52,11 @@ Det eneste krav til filer der skal skæres er at de kan åbnes af programmet Lig
 #### Tegn din fil direkte i lightburn    
 Der er installeret lightburn på computeren ved lasercutteren. Som udgangspunkt skal den kun bruges til at 'kommunikere' med lasercutteren og til mindre rettelser og justeringer af design. Der forventes at man har designet klar hjemmefra - dvs. tegn den på din egen pc.  
 Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
+
+Hent også labbets Lightburn-profil med indstillingerne (Kræver version 1.6 eller nyere) :
+[LightBurn Indstillinger](https://github.com/DDlabAU/lasercutter/blob/master/Laser%20Profile%20Export.lbzip)
+
+Importer derefter profilen ind i lightburn på din egen pc.
 
 #### Tegn din fil i et andet program  
 En anden mulighed er at tegne filen i et andet program, som f.eks. Illustrator eller Inkscape, og importere den til lightburn.
