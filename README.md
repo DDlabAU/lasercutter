@@ -16,7 +16,7 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
   - [Indstil skæreindstillinger](#indstil-skæreindstillinger)
 - [Når du skal skære](#når-du-skal-skære)
 - [Vedligeholdelse af maskinen](#vedligeholdelse-af-maskinen)
-- [Nyttige Links + Guides](#nyttige_links_+_guides)
+- [Nyttige Links + Guides](#nyttige_links_guides)
 
 
 
