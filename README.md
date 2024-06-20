@@ -47,8 +47,8 @@ Du finder webshoppen her: [ddlab.au.dk/webshop](http://ddlab.au.dk/webshop/)
 Det eneste krav til filer der skal skæres er at de kan åbnes af programmet Lightburn. Når du skal lave din fil, har du flere muligheder i forhold til hvilke programmer du kan bruge.
 
 #### Tegn din fil direkte i lightburn    
-Der er installeret lightburn på computeren ved lasercutteren. Såfremt den ikke bruges til at skære eller fræse, kan du bruge den til at tegne din fil.  
-Du kan også hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
+Der er installeret lightburn på computeren ved lasercutteren. Som udgangspunkt skal den kun bruges til at 'kommunikere' med lasercutteren og til mindre rettelser og justeringer af design. Der forventes at man har designet klar hjemmefra - dvs. tegn den på din egen pc.  
+Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
 
 #### Tegn din fil i et andet program  
 En anden mulighed er at tegne filen i et andet program, som f.eks. Illustrator eller Inkscape, og importere den til lightburn.
@@ -96,11 +96,14 @@ Hvis du skal gravere en eller flere linjer kan du bruge `Engrave line` indstilli
 *Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren.*
 
 ## Når du skal skære
-Når lasercutteren er i brug **SKAL** maskinen være under opsyn, da der er risiko for, at der går ild i materialet. Det er altså ***ikke*** tilladt at forlade rummet imens maskinen er i gang med at skære.  
+
+- Du MÅ ikke forlade rummet mens maskinen er i gang (i labbets bemandingstid skal du informere den ansatte, hvis du skal forlade maskinen)
+- Du MÅ ikke skære medbragt materiale uden at have spurgt om vurdering og tilladelse.
+- Du MÅ ikke justere på laser-styrken for cut og engrave. Brug de tilpassede pre-sets. 
 
 I rummet hvor lasercutteren står er der flere dyre og farlige maskiner. Opfør dig derfor forsigtigt og med respekt for maskinerne.
 
-Når du skærer skal udsugningen **ALTID** være tændt. Du skal kun aktivere knapperne på selve maskinen, og du skal altså **ikke** indstille noget på den hvide boks til udsugningen i hjørnet af rummet. Udsugningen tændes på knappen **Fans** som altid skal tændes for, sammen med de andre knapper. Tjek altid at der lyser en grøn diode ud fra *Drift* på udsugningen på væggen efter du har tændt for **Fans**. Hvis den mod forventning ikke skulle lyse kontakt en ansat. 
+Når du skærer skal udsugningen **ALTID** være tændt. Du skal kun aktivere knapperne på selve maskinen, og du skal altså **ikke** indstille noget på den hvide boks til udsugningen i hjørnet af rummet. Udsugningen tændes på knappen **Fans** som altid skal tændes for, sammen med de andre knapper. Tjek altid at der lyser en grøn diode ud fra *Drift* på udsugningen på væggen efter du har tændt for **Fans**. Hvis den mod forventning ikke skulle lyse - kontakt en ansat. 
 
 Hvis der, mod forventning, skulle gå ild i dit materiale, stopper du først maskinen ved at trykke på den store røde nødstop-knap, så forsøger du først at slukke ilden med spraydåsen med kølespray, der står ved lasercutteren, og, hvis det ikke er muligt, så med ildslukkeren. Se også sikkerhedsinstruktionerne over maskinen. 
 
