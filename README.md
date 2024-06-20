@@ -1,6 +1,3 @@
-<span style="color:green">This text is red.</span>
-
-
 # Brug af Lasercutteren i DD Lab
 Der er en række ting, man skal være opmærksom på ved brug af lasercutteren og dem kan du læse om lige her.  
 
@@ -35,9 +32,10 @@ Inden du går i gang, er her et par ting, der er smarte at huske på:
 *Hvis du gør dig egne erfaringer eller har tips, så giv dem meget gerne videre til medstuderende og DD Lab*
 
 ## Materialer
-Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). Det er ikke noget lab'et tjener penge på, men er en måde for os at være sikre på, at der ikke bliver skåret i farlige materialer.
+Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). 
+Det er ikke noget lab'et tjener penge på, men er en måde for os at være sikre på, at der ikke bliver skåret i farlige materialer.
 
-Som udgangspunkt sælges der træ og akryl. Har du et ønske om at skære andre materialer, kan du kontakte en ansat i åbningstiden eller på vores mail (ddlabau@gmail.com) og vi vil undersøge om det kan lade sig gøre.
+Som udgangspunkt sælges der træ og akryl. Har du et ønske om at skære andre materialer, skal du kontakte en ansat i åbningstiden eller på vores mail (ddlabau@gmail.com) hvor vi vil undersøge om det kan lade sig gøre.
 
 Du betaler for materialerne på webshoppen og afhenter i lab'ets åbningstid. Du får tilsendt en kvittering på mail, som du skal kunne fremvises, hvis du bliver spurgt af en ansat.
 
@@ -65,10 +63,12 @@ Når du eksporterer din fil, skal du sørge for at gøre det til et af følgende
 * .svg - Scalable Vector Graphics
 * .hpgl / .plt - Plotter vector graphics
 
-#### Indstil farver
+#### Indstil farver (layers)
 Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
 
-Farver i lightburn er en måde at adskille forskellige elementer der skal skæres og fungerer lidt ligesom lag i photoshop eller illustrator. Når en form bliver givet sin egen farve, har man mulighed for at arbejde med den form adskilt fra de andre og give den unikke skæreindstillinger. Giver du den samme farve til flere former vil de pågældende former dele indstillinger. Lagene der bliver dannet udfra farverne er også en måde at styre rækkefølgen af hvad der bliver skåret. Den farve der ligger øverst i oversigten af alle dine lag/farver (`Cuts/Layers`) er den der bliver skåret/graveret først og herefter er den det næste under, og så videre. Ønsker du at ændre på rækkefølgen kan du trække i farverne i listen af dine farver/lag.
+Farver i lightburn er en måde at adskille forskellige elementer der skal skæres og fungerer lidt ligesom lag i photoshop eller illustrator. Når en form bliver givet sin egen farve, har man mulighed for at arbejde med den form adskilt fra de andre og give den unikke skæreindstillinger. Giver du den samme farve til flere former vil de pågældende former dele indstillinger. Lagene der bliver dannet udfra farverne er også en måde at styre rækkefølgen af hvad der bliver skåret. 
+
+Den farve der ligger øverst i oversigten af alle dine lag/farver (`Cuts/Layers`) er den der bliver skåret/graveret først og herefter er den det næste under, og så videre. Ønsker du at ændre på rækkefølgen kan du trække i farverne i listen af dine farver/lag.
 
 Hvor mange farver du er nødt til at bruge afhænger helt af hvad du gerne vil skære. Har du et simpelt cut, hvor alle formerne skal skæres på samme måde, kan du nøjes med at bruge en enkelt farve til det hele.
 
@@ -106,12 +106,17 @@ Hvis du skal gravere en eller flere linjer kan du bruge `Engrave line` indstilli
 
 I rummet hvor lasercutteren står er der flere dyre og farlige maskiner. Opfør dig derfor forsigtigt og med respekt for maskinerne.
 
-Når du skærer skal udsugningen **ALTID** være tændt. Du skal kun aktivere knapperne på selve maskinen, og du skal altså **ikke** indstille noget på den hvide boks til udsugningen i hjørnet af rummet. Udsugningen tændes på knappen **Fans** som altid skal tændes for, sammen med de andre knapper. Tjek altid at der lyser en grøn diode ud fra *Drift* på udsugningen på væggen efter du har tændt for **Fans**. Hvis den mod forventning ikke skulle lyse - kontakt en ansat. 
+Når du skærer skal udsugningen (Fans & Air Pump) **ALTID** være tændt. 
+
+Du skal kun aktivere knapperne på selve maskinen, og du skal altså **ikke** indstille noget på den hvide boks til udsugningen i hjørnet af rummet. 
+
+Udsugningen tændes på knappen **Fans** som altid skal tændes for, sammen med de andre knapper. Tjek altid at der lyser en grøn diode ud fra *Drift* på udsugningen på væggen efter du har tændt for **Fans**. Hvis den mod forventning ikke skulle lyse - kontakt en ansat. 
 
 Hvis der, mod forventning, skulle gå ild i dit materiale, stopper du først maskinen ved at trykke på den store røde nødstop-knap, så forsøger du først at slukke ilden med spraydåsen med kølespray, der står ved lasercutteren, og, hvis det ikke er muligt, så med ildslukkeren. Se også sikkerhedsinstruktionerne over maskinen. 
 
 ## Vedligeholdelse af maskinen
 Det er kun DDLab-ansatte der må foretage vedligeholdelse af maskinen. Du bør derfor tage kontakt til en ansat, hvis du oplever problemer når du skal skære. Det kan du gøre personligt i lab'ets åbningstid eller på mail til ddlabau@gmail.com
+ 
 
 ## Nyttige Links + Guides
 
