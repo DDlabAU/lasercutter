@@ -16,7 +16,7 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
   - [Indstil skæreindstillinger](#indstil-skæreindstillinger)
 - [Når du skal skære](#når-du-skal-skære)
 - [Vedligeholdelse af maskinen](#vedligeholdelse-af-maskinen)
-- [Vil du skære en kasse?](#vil-du-skære-en-kasse)
+- [Nyttige Links + Guides](#nyttige_links_+_guides)
 
 
 
@@ -106,11 +106,14 @@ Hvis der, mod forventning, skulle gå ild i dit materiale, stopper du først mas
 ## Vedligeholdelse af maskinen
 Det er kun DDLab-ansatte der må foretage vedligeholdelse af maskinen. Du bør derfor tage kontakt til en ansat, hvis du oplever problemer når du skal skære. Det kan du gøre personligt i lab'ets åbningstid eller på mail til ddlabau@gmail.com
 
-## Vil du skære en kasse?
+## Nyttige Links + Guides
 
 Hvis du skal bruge en kasse til din elektronik eller i forbindelse med dit projekt, så kan du bruge en online service til at generere tegningerne, så du ikke selv behøver at lave dem fra bunden. Du kan så efterfølgende rette tegningerne til i f.eks. Illustratur, Inkscape eller Lightburn. Vi har to favoritter som du kan prøve:
 
 - [Boxes.py](https://www.festi.info/boxes.py/)
 - [Makercase](http://www.makercase.com/)
 
-Husk på at der er tale om gratis værktøjer der er under udvikling. Tjek derfor altid at målene er som forventet i forhold til din materialetykkelse, inden du skærer dem.
+Husk på at der er tale om gratis værktøjer der er under udvikling. Tjek derfor altid at målene er som forventet i forhold til din materialetykkelse, inden du skærer dem. 
+
+### Guides
+
