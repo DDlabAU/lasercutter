@@ -56,7 +56,7 @@ Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pag
 Hent også labbets Lightburn-profil med indstillingerne (Kræver version 1.6 eller nyere) :
 [LightBurn Indstillinger](https://github.com/DDlabAU/lasercutter/blob/master/Laser%20Profile%20Export.lbzip)
 
-Importer derefter profilen ind i lightburn på din egen pc.
+Importer derefter profilen ind i lightburn på din egen pc.[Guide](https://docs.lightburnsoftware.com/Guides/Migration.html)
 
 #### Tegn din fil i et andet program  
 En anden mulighed er at tegne filen i et andet program, som f.eks. Illustrator eller Inkscape, og importere den til lightburn.
