@@ -47,15 +47,17 @@ Du betaler for materialerne på webshoppen og afhenter i lab'ets åbningstid. Du
 Skal du købe en større mængde materialer på én gang så kom gerne forbi lab'et inden du betaler. Webshoppens beholdning er ikke altid 100% korrekt og på den måde kan vi være helt sikre på, at vi har alle de ønskede materialer inden du betaler.
 
 Du finder webshoppen her: [ddlab.au.dk/webshop](http://ddlab.au.dk/webshop/)
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Når du laver din fil
 
 Det eneste krav til filer der skal skæres er at de kan åbnes af programmet Lightburn. Når du skal lave din fil, har du flere muligheder i forhold til hvilke programmer du kan bruge.
-
+<br>
+<br>
+<br>
 #### Tegn din fil direkte i lightburn    
 Der er installeret lightburn på computeren ved lasercutteren. Som udgangspunkt skal den kun bruges til at 'kommunikere' med lasercutteren og til mindre rettelser og justeringer af design. Der forventes at man har designet klar hjemmefra - dvs. tegn den på din egen pc.  
 Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
@@ -64,9 +66,9 @@ Hent også labbets Lightburn-profil med indstillingerne (Kræver version 1.6 ell
 [LightBurn Indstillinger](https://github.com/DDlabAU/lasercutter/blob/master/Laser%20Profile%20Export.lbzip)
 
 Importer derefter profilen ind i lightburn på din egen pc.[Guide](https://docs.lightburnsoftware.com/Guides/Migration.html)
-
-
-
+<br>
+<br>
+<br>
 #### Tegn din fil i et andet program  
 En anden mulighed er at tegne filen i et andet program, som f.eks. Illustrator eller Inkscape, og importere den til lightburn.
 
@@ -78,9 +80,9 @@ Når du eksporterer din fil, skal du sørge for at gøre det til et af følgende
 * .dxf - Drawing Exchange Format
 * .svg - Scalable Vector Graphics
 * .hpgl / .plt - Plotter vector graphics
-
-
-
+<br>
+<br>
+<br>
 #### Indstil farver (layers)
 Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
 
@@ -93,9 +95,9 @@ Hvor mange farver du er nødt til at bruge afhænger helt af hvad du gerne vil s
 Skal du derimod både gravere og skære dit materiale i samme omgang, er du nødt til at bruge én farve til de former du vil skære og en anden farve til de former du vil gravere. Her er det selvfølgeligt også muligt at bruge forskellige farver til at gravere specifikke former lysere eller mørkere.
 
 Du indstiller farven på en form ved at markere formen og derefter klikke på en farve i bunden af vinduet. Når du har gjort det, vil du se din farve dukke op som et lag ude i højre side af vinduet.
-
-
-
+<br>
+<br>
+<br>
 #### Indstil skæreindstillinger
 Når du har givet din fil de nødvendige farver skal du sørge for at alle farverne/lagene har den korrekte skæreindstilling. Hvad den er, vil afhænge af hvilket materiale du arbejder på, tykkelsen på materialet og hvilket type cut du gerne vil lave (gennemskæring eller gravering).
 
@@ -117,9 +119,11 @@ Hvis du skal gravere en eller flere linjer kan du bruge `Engrave line` indstilli
 <img src="lineengrave.png" width="450">
 
 *Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren.*
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Når du skal skære
 
 - Du MÅ ikke forlade rummet mens maskinen er i gang (i labbets bemandingstid skal du informere den ansatte, hvis du skal forlade maskinen)
@@ -135,18 +139,18 @@ Du skal kun aktivere knapperne på selve maskinen, og du skal altså **ikke** in
 Udsugningen tændes på knappen **Fans** som altid skal tændes for, sammen med de andre knapper. Tjek altid at der lyser en grøn diode ud fra *Drift* på udsugningen på væggen efter du har tændt for **Fans**. Hvis den mod forventning ikke skulle lyse - kontakt en ansat. 
 
 Hvis der, mod forventning, skulle gå ild i dit materiale, stopper du først maskinen ved at trykke på den store røde nødstop-knap, så forsøger du først at slukke ilden med spraydåsen med kølespray, der står ved lasercutteren, og, hvis det ikke er muligt, så med ildslukkeren. Se også sikkerhedsinstruktionerne over maskinen. 
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Vedligeholdelse af maskinen
 Det er kun DDLab-ansatte der må foretage vedligeholdelse af maskinen. Du bør derfor tage kontakt til en ansat, hvis du oplever problemer når du skal skære. Det kan du gøre personligt i lab'ets åbningstid eller på mail til ddlabau@gmail.com
- 
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Nyttige Links + Guides
 
 Hvis du skal bruge en kasse til din elektronik eller i forbindelse med dit projekt, så kan du bruge en online service til at generere tegningerne, så du ikke selv behøver at lave dem fra bunden. Du kan så efterfølgende rette tegningerne til i f.eks. Illustratur, Inkscape eller Lightburn. Vi har to favoritter som du kan prøve:
@@ -155,11 +159,11 @@ Hvis du skal bruge en kasse til din elektronik eller i forbindelse med dit proje
 - [Makercase](http://www.makercase.com/)
 
 Husk på at der er tale om gratis værktøjer der er under udvikling. Tjek derfor altid at målene er som forventet i forhold til din materialetykkelse, inden du skærer dem. 
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 ### Guides
 
 [Trace Image med kamera](https://docs.google.com/presentation/d/1d29kRin2b5o1rduTOiAI4QecXiaNsfKvVj5YhygZm_Y/edit?usp=sharing)
