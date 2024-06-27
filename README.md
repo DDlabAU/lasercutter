@@ -33,6 +33,9 @@ Inden du går i gang, er her et par ting, der er smarte at huske på:
 *Hvis du gør dig egne erfaringer eller har tips, så giv dem meget gerne videre til medstuderende og DD Lab*
 
 
+
+
+
 ## Materialer
 Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). 
 Det er ikke noget lab'et tjener penge på, men er en måde for os at være sikre på, at der ikke bliver skåret i farlige materialer.
@@ -44,6 +47,10 @@ Du betaler for materialerne på webshoppen og afhenter i lab'ets åbningstid. Du
 Skal du købe en større mængde materialer på én gang så kom gerne forbi lab'et inden du betaler. Webshoppens beholdning er ikke altid 100% korrekt og på den måde kan vi være helt sikre på, at vi har alle de ønskede materialer inden du betaler.
 
 Du finder webshoppen her: [ddlab.au.dk/webshop](http://ddlab.au.dk/webshop/)
+
+
+
+
 
 ## Når du laver din fil
 
@@ -58,6 +65,8 @@ Hent også labbets Lightburn-profil med indstillingerne (Kræver version 1.6 ell
 
 Importer derefter profilen ind i lightburn på din egen pc.[Guide](https://docs.lightburnsoftware.com/Guides/Migration.html)
 
+
+
 #### Tegn din fil i et andet program  
 En anden mulighed er at tegne filen i et andet program, som f.eks. Illustrator eller Inkscape, og importere den til lightburn.
 
@@ -69,6 +78,8 @@ Når du eksporterer din fil, skal du sørge for at gøre det til et af følgende
 * .dxf - Drawing Exchange Format
 * .svg - Scalable Vector Graphics
 * .hpgl / .plt - Plotter vector graphics
+
+
 
 #### Indstil farver (layers)
 Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
@@ -82,6 +93,8 @@ Hvor mange farver du er nødt til at bruge afhænger helt af hvad du gerne vil s
 Skal du derimod både gravere og skære dit materiale i samme omgang, er du nødt til at bruge én farve til de former du vil skære og en anden farve til de former du vil gravere. Her er det selvfølgeligt også muligt at bruge forskellige farver til at gravere specifikke former lysere eller mørkere.
 
 Du indstiller farven på en form ved at markere formen og derefter klikke på en farve i bunden af vinduet. Når du har gjort det, vil du se din farve dukke op som et lag ude i højre side af vinduet.
+
+
 
 #### Indstil skæreindstillinger
 Når du har givet din fil de nødvendige farver skal du sørge for at alle farverne/lagene har den korrekte skæreindstilling. Hvad den er, vil afhænge af hvilket materiale du arbejder på, tykkelsen på materialet og hvilket type cut du gerne vil lave (gennemskæring eller gravering).
@@ -105,6 +118,8 @@ Hvis du skal gravere en eller flere linjer kan du bruge `Engrave line` indstilli
 
 *Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren.*
 
+
+
 ## Når du skal skære
 
 - Du MÅ ikke forlade rummet mens maskinen er i gang (i labbets bemandingstid skal du informere den ansatte, hvis du skal forlade maskinen)
@@ -121,9 +136,16 @@ Udsugningen tændes på knappen **Fans** som altid skal tændes for, sammen med 
 
 Hvis der, mod forventning, skulle gå ild i dit materiale, stopper du først maskinen ved at trykke på den store røde nødstop-knap, så forsøger du først at slukke ilden med spraydåsen med kølespray, der står ved lasercutteren, og, hvis det ikke er muligt, så med ildslukkeren. Se også sikkerhedsinstruktionerne over maskinen. 
 
+
+
+
+
 ## Vedligeholdelse af maskinen
 Det er kun DDLab-ansatte der må foretage vedligeholdelse af maskinen. Du bør derfor tage kontakt til en ansat, hvis du oplever problemer når du skal skære. Det kan du gøre personligt i lab'ets åbningstid eller på mail til ddlabau@gmail.com
  
+
+
+
 
 ## Nyttige Links + Guides
 
@@ -133,6 +155,10 @@ Hvis du skal bruge en kasse til din elektronik eller i forbindelse med dit proje
 - [Makercase](http://www.makercase.com/)
 
 Husk på at der er tale om gratis værktøjer der er under udvikling. Tjek derfor altid at målene er som forventet i forhold til din materialetykkelse, inden du skærer dem. 
+
+
+
+
 
 ### Guides
 
