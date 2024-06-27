@@ -52,13 +52,16 @@ Du finder webshoppen her: [ddlab.au.dk/webshop](http://ddlab.au.dk/webshop/)
 <br>
 <br>
 <br>
+
 ## Når du laver din fil
 
 Det eneste krav til filer der skal skæres er at de kan åbnes af programmet Lightburn. Når du skal lave din fil, har du flere muligheder i forhold til hvilke programmer du kan bruge.
 <br>
 <br>
 <br>
-#### Tegn din fil direkte i lightburn    
+
+#### Tegn din fil direkte i lightburn
+
 Der er installeret lightburn på computeren ved lasercutteren. Som udgangspunkt skal den kun bruges til at 'kommunikere' med lasercutteren og til mindre rettelser og justeringer af design. Der forventes at man har designet klar hjemmefra - dvs. tegn den på din egen pc.  
 Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
 
@@ -80,14 +83,14 @@ Når du eksporterer din fil, skal du sørge for at gøre det til et af følgende
 * .dxf - Drawing Exchange Format
 * .svg - Scalable Vector Graphics
 * .hpgl / .plt - Plotter vector graphics
-* 
+
 <br>
 <br>
 <br>
 
 #### Indstil farver (layers)
-Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
 
+Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
 Farver i lightburn er en måde at adskille forskellige elementer der skal skæres og fungerer lidt ligesom lag i photoshop eller illustrator. Når en form bliver givet sin egen farve, har man mulighed for at arbejde med den form adskilt fra de andre og give den unikke skæreindstillinger. Giver du den samme farve til flere former vil de pågældende former dele indstillinger. Lagene der bliver dannet udfra farverne er også en måde at styre rækkefølgen af hvad der bliver skåret. 
 
 Den farve der ligger øverst i oversigten af alle dine lag/farver (`Cuts/Layers`) er den der bliver skåret/graveret først og herefter er den det næste under, og så videre. Ønsker du at ændre på rækkefølgen kan du trække i farverne i listen af dine farver/lag.
@@ -100,7 +103,9 @@ Du indstiller farven på en form ved at markere formen og derefter klikke på en
 <br>
 <br>
 <br>
+
 #### Indstil skæreindstillinger
+
 Når du har givet din fil de nødvendige farver skal du sørge for at alle farverne/lagene har den korrekte skæreindstilling. Hvad den er, vil afhænge af hvilket materiale du arbejder på, tykkelsen på materialet og hvilket type cut du gerne vil lave (gennemskæring eller gravering).
 
 DDLab vedligeholder en samling af skæreindstillinger du kan bruge som udgangspunkt for dine egne indstillinger. På grund af slid af maskinen og små forskelle på materialerne der skæres, kan vi ikke garantere at indstillingerne skærer helt perfekt. Du bør derfor altid lave et mindre test-cut i dit materiale og derudfra justere indstillingerne så du opnår dit ønskede resultat.
