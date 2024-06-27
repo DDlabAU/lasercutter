@@ -80,9 +80,11 @@ Når du eksporterer din fil, skal du sørge for at gøre det til et af følgende
 * .dxf - Drawing Exchange Format
 * .svg - Scalable Vector Graphics
 * .hpgl / .plt - Plotter vector graphics
+* 
 <br>
 <br>
 <br>
+
 #### Indstil farver (layers)
 Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
 
