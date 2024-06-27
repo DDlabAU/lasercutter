@@ -31,11 +31,11 @@ Inden du går i gang, er her et par ting, der er smarte at huske på:
 - Hvis du vil undgå røgmærker på dit træ, så tape overfladen med malertape, inden du skærer.  
 
 *Hvis du gør dig egne erfaringer eller har tips, så giv dem meget gerne videre til medstuderende og DD Lab*
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 ## Materialer
 Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). 
 Det er ikke noget lab'et tjener penge på, men er en måde for os at være sikre på, at der ikke bliver skåret i farlige materialer.
