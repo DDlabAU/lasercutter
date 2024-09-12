@@ -149,7 +149,7 @@ Hvis du skal gravere i akryl kan du med fordel lægge siden uden film opad da fi
 
 Hvis du skal gravere en eller flere linjer kan du bruge `Engrave line` indstillingerne under `Engrave` for de forskellige materialer (lige nu er der kun graverings indstillinger for linje for finer). Herunder kan du se hvordan gravering vil se ud i de tre forskellige indstillinger vi har (light, medium og dark). 
 
-<img src="lineengrave.png" width="450">
+<img src="fill_new.jpg">
 
 *Du kan også finde disse prøveskæringer i labbet ved siden af lasercutteren.*
 <br>
