@@ -13,7 +13,7 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
 - [Når du laver din fil](#når-du-laver-din-fil)
   - [Tegn din fil direkte i Lightburn](#tegn-din-fil-direkte-i-lightburn)
   - [Tegn din fil i et andet program](#tegn-din-fil-i-et-andet-program)
-  - [Indstil farver](#indstil-farver-(layers))
+  - [Indstil farver (layers)](#indstil-farver-layers)
   - [Indstil skæreindstillinger](#indstil-skæreindstillinger)
 - [Når du skal skære](#når-du-skal-skære) 🧯
 - [Vedligeholdelse af maskinen](#vedligeholdelse-af-maskinen) 🛠️
@@ -93,6 +93,7 @@ Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pag
 <br>
 <br>
 <br>
+
 #### Tegn din fil i et andet program  
 En anden mulighed er at tegne filen i et andet program, som f.eks. Illustrator eller Inkscape, og importere den til lightburn.
 
