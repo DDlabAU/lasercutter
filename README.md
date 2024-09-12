@@ -40,11 +40,18 @@ Inden du går i gang, er her et par ting, der er smarte at huske på:
 
 #### Indstil Lightburn på din egen PC
 
-For at have den mest optimale version af Lightburn, kan du installere :
+[Lightburns officielle guide](https://docs.lightburnsoftware.com/Guides/Migration.html)
 
-- Profil med vores instillinger *link
-- Et samlet sæt af skæreindstillinger *link
+For at have den mest optimale version af Lightburn, kan du installere en sammenfattet profil med alle vores instillinger [her]()
+Denne profil inkluderer bl.a. _material library_, som består af forskellige skæreindstillinger til alle tilladte materialer. 
 
+**Guide**
+- Gem filen ".lbzip" på din PC. 
+- Åbn Lightburn  
+- 
+<br>
+<br>
+<br>
 
 ## Materialer
 Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). 
