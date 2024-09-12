@@ -37,6 +37,15 @@ Inden du går i gang, er her et par ting, der er smarte at huske på:
 <br>
 <br>
 <br>
+
+#### Indstil Lightburn på din egen PC
+
+For at have den mest optimale version af Lightburn, kan du installere :
+
+- Profil med vores instillinger *link
+- Et samlet sæt af skæreindstillinger *link
+
+
 ## Materialer
 Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). 
 Det er ikke noget lab'et tjener penge på, men er en måde for os at være sikre på, at der ikke bliver skåret i farlige materialer.
@@ -53,13 +62,6 @@ Du finder webshoppen her: [ddlab.au.dk/webshop](http://ddlab.au.dk/webshop/)
 <br>
 <br>
 <br>
-#### Indstil Lightburn på din egen PC
-
-For at have den mest optimale version af Lightburn, kan du installere :
-
-- Profil med vores instillinger *link
-- Et samlet sæt af skæreindstillinger *link
-
 
 
 
