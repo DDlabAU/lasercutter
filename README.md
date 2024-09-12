@@ -42,7 +42,8 @@ Inden du går i gang, er her et par ting, der er smarte at huske på:
 
 [Lightburns officielle guide](https://docs.lightburnsoftware.com/Guides/Migration.html)
 
-For at have den mest optimale version af Lightburn, kan du installere en sammenfattet profil med alle vores instillinger [her]()
+For at have den mest optimale version af Lightburn, kan du installere en sammenfattet profil med alle vores instillinger (Kræver version 1.6 eller nyere) :
+[LightBurn Indstillinger](https://github.com/DDlabAU/lasercutter/blob/master/Laser%20Profile%20Export.lbzip)
 Denne profil inkluderer bl.a. _material library_, som består af forskellige skæreindstillinger til alle tilladte materialer. 
 
 **Guide**
@@ -52,6 +53,10 @@ Denne profil inkluderer bl.a. _material library_, som består af forskellige sk�
 <br>
 <br>
 <br>
+
+Hent også labbets Lightburn-profil med indstillingerne 
+
+
 
 ## Materialer
 Det er kun tilladt at lasercutte materialer købt på [DDLabs webshop](ddlab.au.dk/webshop). 
@@ -82,13 +87,9 @@ Det eneste krav til filer der skal skæres er at de kan åbnes af programmet Lig
 
 #### Tegn din fil direkte i lightburn
 
-Der er installeret lightburn på computeren ved lasercutteren. Som udgangspunkt skal den kun bruges til at 'kommunikere' med lasercutteren og til mindre rettelser og justeringer af design. Der forventes at man har designet klar hjemmefra - dvs. tegn den på din egen pc.  
+Der er installeret lightburn på computeren ved lasercutteren. Som udgangspunkt skal den kun bruges til at 'kommunikere' med lasercutteren og til mindre rettelser og justeringer af design. Der forventes at man har gjort designet klar hjemmefra - dvs. tegn den på din egen pc.  
 Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
 
-Hent også labbets Lightburn-profil med indstillingerne (Kræver version 1.6 eller nyere) :
-[LightBurn Indstillinger](https://github.com/DDlabAU/lasercutter/blob/master/Laser%20Profile%20Export.lbzip)
-
-Importer derefter profilen ind i lightburn på din egen pc.[Guide](https://docs.lightburnsoftware.com/Guides/Migration.html)
 <br>
 <br>
 <br>
@@ -110,10 +111,14 @@ Når du eksporterer din fil, skal du sørge for at gøre det til et af følgende
 
 #### Indstil farver (layers)
 
-Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
-Farver i lightburn er en måde at adskille forskellige elementer der skal skæres og fungerer lidt ligesom lag i photoshop eller illustrator. Når en form bliver givet sin egen farve, har man mulighed for at arbejde med den form adskilt fra de andre og give den unikke skæreindstillinger. Giver du den samme farve til flere former vil de pågældende former dele indstillinger. Lagene der bliver dannet udfra farverne er også en måde at styre rækkefølgen af hvad der bliver skåret. 
+**Man kan ikke indgravere i forskellige farver! - farver = layers**
 
-Den farve der ligger øverst i oversigten af alle dine lag/farver (`Cuts/Layers`) er den der bliver skåret/graveret først og herefter er den det næste under, og så videre. Ønsker du at ændre på rækkefølgen kan du trække i farverne i listen af dine farver/lag.
+Når du er færdig med at tegne og har importeret din fil til lightburn, skal du indstille farverne på dit cut.
+
+Farver i lightburn er en måde at adskille forskellige elementer (bl.a. visuelt) og fungerer lidt ligesom lag i photoshop eller illustrator. Når en form bliver givet sin egen farve, har man mulighed for at arbejde med den form adskilt fra de andre og give den unikke skære- eller indgraveringsindstillinger. Giver du den samme farve til flere former vil de pågældende former ligge under samme lag og dele indstillinger. 
+
+Den farve der ligger øverst i oversigten af alle dine lag/farver (`Cuts/Layers`) er den der bliver skåret/graveret **først** og herefter er det den næste under, osv. 
+Ønsker du at ændre på rækkefølgen kan du trække i farverne i listen af dine farver/lag.
 
 Hvor mange farver du er nødt til at bruge afhænger helt af hvad du gerne vil skære. Har du et simpelt cut, hvor alle formerne skal skæres på samme måde, kan du nøjes med at bruge en enkelt farve til det hele.
 
