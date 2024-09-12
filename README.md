@@ -8,6 +8,7 @@ Det er kun tilladt at bruge lasercutteren til studierelevante aktiviteter. Skal 
 ## Indhold
 
 - [Inden du går i gang](#inden-du-går-i-gang) ❗️❗️❗️
+  - [Indstil Lightburn på din egen PC](#indstil-lightburn-på-din-egen-pc)
 - [Materialer](#materialer) 🪵
 - [Når du laver din fil](#når-du-laver-din-fil)
   - [Tegn din fil direkte i Lightburn](#tegn-din-fil-direkte-i-lightburn)
@@ -52,6 +53,16 @@ Du finder webshoppen her: [ddlab.au.dk/webshop](http://ddlab.au.dk/webshop/)
 <br>
 <br>
 <br>
+#### Indstil Lightburn på din egen PC
+
+For at have den mest optimale version af Lightburn, kan du installere :
+
+- Profil med vores instillinger *link
+- Et samlet sæt af skæreindstillinger *link
+
+
+
+
 
 ## Når du laver din fil
 
