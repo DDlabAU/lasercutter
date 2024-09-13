@@ -47,9 +47,10 @@ For at have den mest optimale version af Lightburn, kan du installere en sammenf
 Denne profil inkluderer bl.a. _material library_, som består af forskellige skæreindstillinger til alle tilladte materialer. 
 
 **Guide**
-- Gem filen ".lbzip" på din PC. 
+- Gem filen "Laser Profile Export.lbzip" på din PC. 
 - Åbn Lightburn  
-- 
+- Tryk på _File_ / _Filer_ → _Bundles_ → _Import Bundle_ og vælg filen. 
+- Marker alle komponenter og tryk _Import_. 
 <br>
 <br>
 <br>
