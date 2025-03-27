@@ -1,8 +1,4 @@
-# Guide til hvordan du laserskærer generativ kunst med P5
+### 🌀 Abstract pattern
+Dette eksempel er en modificeret udgave af kunstværket ***P_2_2_3_02***, som er publiceret i bogen *Generative Design* af *Benedikt Gross*, *Hartmut Bohnacker*, *Julia Laub* og *Claudius Lazzeroni*. Du kan finde kunstværket [her](http://www.generative-gestaltung.de/2/) samt lignende værker. 
 
-## Indhold
-- [Inden du går i gang](#inden-du-går-i-gang)
-- [Generer dit kunstværk med P5]()
-- [Importer dit kunstværk til Lightburn]()
-- [Vælg de rigtige skære-indstillinger]()
-- [Cut]()
+<p align="center"> <img src="./Media/mønster.gif" alt="P_2_2_3_02"> </p>
