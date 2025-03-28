@@ -1,6 +1,6 @@
 # Laserskær Generativ Kunst med P5.js
 
-![Billede af færdigt laserskåret kunstværk]
+<!-- <p align="center"> <img src="../Media/lasercut.gif" alt="kunstværk"> </p> -->
 
 ## Indhold
 
@@ -14,20 +14,20 @@
 
 
 
-## Inden du går i gang
+## 🛠️ Inden du går i gang
 
 Før du begynder at laserskære, skal du:
 
-- Læse den [officielle guide]() til hvordan du anvender lab'ets lasercutter.
+- Læse den [officielle guide](../README.md#brug-af-lasercutteren-i-dd-lab) til hvordan du anvender lab'ets lasercutter.
   <br>
 
 - Have et gyldigt kørekort til laserskæreren. Hvis du ikke har dette, kan du henvende dig til en af lab'ets ansatte og bede om hjælp til at laserskære.
 
 
 
-## Generer dit kunstværk med P5.js
+## 🎨 Generer dit kunstværk med P5.js
 
-#### Metode 1: Lav dit eget kunstværk
+#### ✏️ *Metode 1: Lav dit eget kunstværk*
 
 For at kunne laserskære dit P5.js-kunstværk skal du gemme det som en PNG eller SVG. Følg disse trin:
 
@@ -68,50 +68,61 @@ For at kunne laserskære dit P5.js-kunstværk skal du gemme det som en PNG eller
    }
    ```
    <br>
-4. Klik på **"Go Live"** i Visual Studio Code for at åbne koden i din browser *(kræver Live Server-plugin)*.
+4. Klik på ***"Go Live"*** i Visual Studio Code for at åbne koden i din browser *(kræver Live Server-plugin)*.
+<img src="./Media/live_server.png" alt="live" width="280">
    <br>
-5. Tryk på **"S"** for at gemme kunstværket som en SVG-fil.
+
+5. Tryk på ***"S"*** for at gemme kunstværket som en SVG-fil.
 
 
-#### Metode 2: Download et eksempel
+#### 📥 *Metode 2: Download et eksempel
 
 1. Opret en projektmappe på din computer.
     <br>
-2. Åben **Abstract Pattern** mappen, download filerne og placer dem i den nye mappe du lige har lavet.
+2. Åben ***Abstract Pattern*** mappen, download filerne og placer dem i den nye mappe du lige har lavet.
+<img src="./Media/mappe.png" alt="live" width="500">
     <br>
+
 4. Åbn projektet i Visual Studio Code
-   - **File** → **Open Folder** → ***"navnet på din projektmappe"***.
+   - ***File*** → ***Open Folder*** → ***"navnet på din projektmappe"***.
     <br>
-5. Klik på **"Go Live"** i Visual Studio Code for at åbne koden i din browser *(kræver Live Server-plugin).*
+5. Klik på ***"Go Live"*** i Visual Studio Code for at åbne koden i din browser *(kræver Live Server-plugin).*
+<img src="./Media/live_server.png" alt="live" width="280">
     <br>
 6. Tryk på **"S"** for at gemme kunstværket som en SVG-fil.
     <br>
 
 
-## Importer dit kunstværk til Lightburn
+##  📂 Importer dit kunstværk til Lightburn
 
 1. Åbn Lightburn og importer SVG-filen
-   - **File** → **Import** → ***drawing.svg***.
+   - ***File*** → ***Import*** → ***drawing.svg***.
 
 
-## Vælg de rigtige skæreindstillinger
+## ⚙️ Vælg de rigtige skæreindstillinger
 
-Indstillingerne afhænger af materialet. Standardindstillingerne her gælder for finer. Hvis du bruger karton eller akryl, skal du justere parametrene.
+Skæreindstillingerne afhænger af dit materiale. Dette eksempel tager udgangspunkt i *standardindstillingerne* for finér. Hvis du bruger karton eller akryl, skal du justere indstillingerne herefter.
 
 1. Marker kunstværket og tildel en farve.
     <br>
-2. Gå til **Cuts/Layers** og angiv skæreindstillinger for farven.
+2. Gå til ***Cuts/Layers*** og angiv skæreindstillinger for farven.
+<img src="./Media/farve.png" alt="farve" width="500">
     <br>
-3. Hvis dit kunstværk har overlappende linjer ( f.eks. line-art):
-   - Vælg **Mode** → **Line**.
-   - Dobbeltklik på **Spd/Pwr** for at justere laserens hastighed og styrke.
-   <br>
-4. Hvis linjerne **ikke** overlapper hinanden:
-   - Vælg en af de forudindstillet skæreindstilling:
-     - Klik på farven under **Cuts/Layers**.
-     - Gå til **Material Library** → **Plywood (Finer)** → **Engrave Line**.
-     - Klik på **Assign to Layer**.
 
-## Laserskær dit kunstværk 🎉
+3. Hvis dit kunstværk har overlappende linjer ( f.eks. line-art):
+   - Vælg ***Mode*** → ***Line***.
+   - Dobbeltklik på ***Spd/Pwr*** for at justere laserens hastighed og styrke.
+   - Sæt `Speed (mm/sec)= 320`, ``Max Power (%) = 10.30``, ``Min Power (%) = 7.30`` og tryk derefter ***OK***.
+   <br>
+   <p align="center">  <img src="./Media/laser_settings.png" alt="settings" width="300"> </p>
+
+   <br>
+4. Hvis linjerne ***ikke*** overlapper hinanden:
+   - Vælg en af de forudindstillet skæreindstilling:
+     - Klik på farven under ***Cuts/Layers***.
+     - Gå til ***Material Library*** → ***Plywood (Finer)*** → ***Engrave Line***.
+     - Klik på ***Assign to Layer***.
+
+## 🔥 Laserskær dit kunstværk 
 
 Når alle indstillinger er på plads, er du klar til at laserskære!
