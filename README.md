@@ -191,6 +191,7 @@ Hvis du skal bruge en kasse til din elektronik eller i forbindelse med dit proje
 
 - [Boxes.py](https://www.festi.info/boxes.py/)
 - [Makercase](http://www.makercase.com/)
+- [Living Hinges generator](https://pomocnik.rs/hng.html)
 
 Husk på at der er tale om gratis værktøjer der er under udvikling. Tjek derfor altid at målene er som forventet i forhold til din materialetykkelse, inden du skærer dem. 
 <br>
