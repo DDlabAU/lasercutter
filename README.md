@@ -212,3 +212,141 @@ En lille guide til indstilling af billeder vha. "Adjust Image" funktion, der gø
 [Ting alle med lasercutter kørekort SKAL vide](https://docs.google.com/document/d/194hD3mJoMfGWuLNzh1YbXGY8i5Xl2ATHYWU0qgb8bRE/edit?usp=sharing)
 
 Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus. 
+
+
+<!-- Pixel Fire: drop near the end of <body> -->
+<div id="pixel-fire" aria-hidden="true"></div>
+<style>
+  #pixel-fire {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: 140px;           /* fire band height on screen */
+    pointer-events: none;    /* don’t block clicks */
+    z-index: 9999;
+    mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
+  }
+  #pixel-fire canvas {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;   /* keep the chunky look */
+    image-rendering: crisp-edges;
+    display: block;
+  }
+
+  /* Respect reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    #pixel-fire { display: none; }
+  }
+</style>
+<script>
+(function () {
+  const container = document.getElementById('pixel-fire');
+  if (!container) return;
+
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
+  container.appendChild(canvas);
+
+  // Tunables
+  const pixelSize = 4;            // larger = chunkier pixels
+  const maxIntensity = 36;        // palette size (more = smoother gradient)
+  const cooling = 2;              // 0..3; bigger = faster decay
+  const wind = 1;                 // -2..2; negative = drift left, positive = right
+  const fpsCap = 60;              // simple FPS cap
+
+  let W = 0, H = 0, gridW = 0, gridH = 0, fire = [], palette = [];
+
+  function makePalette() {
+    palette = [];
+    for (let i = 0; i <= maxIntensity; i++) {
+      const t = i / maxIntensity;
+      // warm gradient: black -> deep red -> orange -> yellow -> white
+      const r = Math.min(255, Math.floor(255 * t));
+      const g = Math.min(255, Math.floor(170 * Math.pow(t, 1.2)));
+      const b = Math.min(255, Math.floor(30  * Math.pow(t, 2.0)));
+      palette.push([r, g, b, 255]);
+    }
+  }
+
+  function resize() {
+    W = container.clientWidth;
+    H = container.clientHeight;
+    gridW = Math.max(64, Math.floor(W / pixelSize));
+    gridH = Math.max(32, Math.floor(H / pixelSize));
+    canvas.width  = gridW;     // 1 canvas pixel = 1 fire cell (scaled via CSS)
+    canvas.height = gridH;
+    fire = new Array(gridW * gridH).fill(0);
+    // Set bottom row as heat source
+    for (let x = 0; x < gridW; x++) fire[(gridH - 1) * gridW + x] = maxIntensity;
+  }
+
+  function idx(x, y) { return y * gridW + x; }
+
+  function step() {
+    // propagate from bottom-2 up to top
+    for (let y = 0; y < gridH - 1; y++) {
+      for (let x = 0; x < gridW; x++) {
+        const below = idx((x), y + 1);
+        // random decay + a little turbulence
+        const decay = (Math.random() * (cooling + 1)) | 0;
+        let newI = fire[below] - decay;
+        if (newI < 0) newI = 0;
+
+        // wind drift
+        const drift = ((Math.random() * 3) | 0) - 1 + wind; // -2..2
+        const nx = (x + drift + gridW) % gridW;
+        fire[idx(nx, y)] = newI;
+      }
+    }
+
+    // occasionally reheat the bottom (to avoid “cooling out”)
+    for (let x = 0; x < gridW; x++) {
+      const base = idx(x, gridH - 1);
+      // jitter base intensity a bit for flicker
+      fire[base] = Math.max(
+        0,
+        Math.min(maxIntensity, maxIntensity - ((Math.random() * 3) | 0))
+      );
+    }
+  }
+
+  function draw() {
+    const img = ctx.getImageData(0, 0, gridW, gridH);
+    const data = img.data;
+    for (let i = 0; i < fire.length; i++) {
+      const c = palette[fire[i]];
+      const off = i * 4;
+      data[off]     = c[0];
+      data[off + 1] = c[1];
+      data[off + 2] = c[2];
+      data[off + 3] = 220; // slight transparency so it blends with page
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+
+  // Basic rAF loop with fps cap
+  let last = 0;
+  function loop(ts) {
+    if (ts - last > 1000 / fpsCap) {
+      step();
+      draw();
+      last = ts;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  // Init
+  makePalette();
+  resize();
+  requestAnimationFrame(loop);
+
+  // Debounced resize
+  let rAF = null;
+  window.addEventListener('resize', () => {
+    if (rAF) cancelAnimationFrame(rAF);
+    rAF = requestAnimationFrame(() => {
+      resize();
+    });
+  });
+})();
+</script>
