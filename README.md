@@ -316,10 +316,15 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
     for (let i = 0; i < fire.length; i++) {
       const c = palette[fire[i]];
       const off = i * 4;
-      data[off]     = c[0];
-      data[off + 1] = c[1];
-      data[off + 2] = c[2];
-      data[off + 3] = 220; // slight transparency so it blends with page
+if (fire[i] === 0) {
+  data[off + 3] = 0; // fully transparent when “no fire”
+} else {
+  data[off]     = c[0];
+  data[off + 1] = c[1];
+  data[off + 2] = c[2];
+  data[off + 3] = 255; // fully opaque flame pixel
+}
+
     }
     ctx.putImageData(img, 0, 0);
   }
