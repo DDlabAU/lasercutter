@@ -214,7 +214,6 @@ En lille guide til indstilling af billeder vha. "Adjust Image" funktion, der gø
 Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus. 
 
 
-<!-- Pixel Fire: drop near the end of <body> -->
 <div id="pixel-fire" aria-hidden="true"></div>
 <style>
   #pixel-fire {
@@ -227,7 +226,7 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
   }
   #pixel-fire canvas {
     width: 100%;
-    height: 90%;
+    height: 100%;
     image-rendering: pixelated;   /* keep the chunky look */
     image-rendering: crisp-edges;
     display: block;
