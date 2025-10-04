@@ -219,7 +219,7 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
   #pixel-fire {
     position: fixed;
     left: 0; right: 0; bottom: 0;
-    height: 110px;           /* fire band height on screen */
+    height: 140px;           /* fire band height on screen */
     pointer-events: none;    /* don’t block clicks */
     z-index: 9999;
     mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
@@ -323,6 +323,24 @@ if (fire[i] === 0) {
   data[off + 2] = c[2];
   data[off + 3] = 255; // fully opaque flame pixel
 }
+      const margin = 6; // how many rows of empty space at the top
+for (let y = margin; y < gridH; y++) {
+  for (let x = 0; x < gridW; x++) {
+    const i = idx(x, y);
+    const c = palette[fire[i]];
+    const off = i * 4;
+
+    if (fire[i] === 0) {
+      data[off + 3] = 0;
+    } else {
+      data[off]     = c[0];
+      data[off + 1] = c[1];
+      data[off + 2] = c[2];
+      data[off + 3] = Math.floor((fire[i] / maxIntensity) * 255);
+    }
+  }
+}
+
 
     }
     ctx.putImageData(img, 0, 0);
