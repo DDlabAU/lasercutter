@@ -282,33 +282,30 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
 
   function idx(x, y) { return y * gridW + x; }
 
-  function step() {
-    // propagate from bottom-2 up to top
-    for (let y = 0; y < gridH - 1; y++) {
-      for (let x = 0; x < gridW; x++) {
-        const below = idx((x), y + 1);
-        // random decay + a little turbulence
-        const decay = (Math.random() * (cooling + 1)) | 0;
-        let newI = fire[below] - decay;
-        if (newI < 0) newI = 0;
+const topMargin = 4; // how many pixel cells of clear space at the top
 
-        // wind drift
-        const drift = ((Math.random() * 3) | 0) - 1 + wind; // -2..2
-        const nx = (x + drift + gridW) % gridW;
-        fire[idx(nx, y)] = newI;
-      }
-    }
-
-    // occasionally reheat the bottom (to avoid “cooling out”)
+function step() {
+  // propagate from y=0..gridH-2, but leave margin at the top
+  for (let y = topMargin; y < gridH - 1; y++) {
     for (let x = 0; x < gridW; x++) {
-      const base = idx(x, gridH - 1);
-      // jitter base intensity a bit for flicker
-      fire[base] = Math.max(
-        0,
-        Math.min(maxIntensity, maxIntensity - ((Math.random() * 3) | 0))
-      );
+      const below = idx(x, y + 1);
+      const decay = (Math.random() * (cooling + 1)) | 0;
+      let newI = fire[below] - decay;
+      if (newI < 0) newI = 0;
+
+      const drift = (((Math.random() * 3) | 0) - 1) + wind;
+      const nx = (x + drift + gridW) % gridW;
+      fire[idx(nx, y)] = newI;
     }
   }
+
+  // reheat the bottom row as usual
+  for (let x = 0; x < gridW; x++) {
+    fire[idx(x, gridH - 1)] =
+      Math.max(0, Math.min(maxIntensity, maxIntensity - ((Math.random() * 3) | 0)));
+  }
+}
+
 
   function draw() {
     const img = ctx.getImageData(0, 0, gridW, gridH);
