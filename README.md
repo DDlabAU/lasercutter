@@ -215,58 +215,149 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
 
 
 
-<div align="center">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    role="img"
-    aria-label="Animated fire footer"
-    viewBox="0 0 800 160"
-    width="100%"
-    height="140"
-    preserveAspectRatio="none"
-  >
-    <defs>
-      <!-- Warm gradient for the flame body -->
-      <linearGradient id="flameGradient" x1="0" x2="0" y1="1" y2="0">
-        <stop offset="0%" stop-color="#f44336" stop-opacity="0.95"/>
-        <stop offset="55%" stop-color="#ff9800" stop-opacity="0.95"/>
-        <stop offset="92%" stop-color="#fff176" stop-opacity="0.95"/>
-        <stop offset="100%" stop-color="#fff176" stop-opacity="0"/>
-      </linearGradient>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pure CSS Fire Footer</title>
+<style>
+  /* Page chrome (safe to remove) */
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: transparent; /* keep site background visible through flames */
+  }
+  main { padding: 2rem; max-width: 70ch; margin: 0 auto; }
 
-      <!-- Noise-based distortion to create flicker and wavy tongues -->
-      <filter id="flameWarp" x="-20%" y="-30%" width="140%" height="180%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="4" result="noise">
-          <animate attributeName="baseFrequency" dur="3.5s" values="0.018;0.028;0.022;0.018" repeatCount="indefinite"/>
-          <animate attributeName="seed" dur="4s" values="4;7;10;4" repeatCount="indefinite"/>
-        </feTurbulence>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="42" xChannelSelector="R" yChannelSelector="G">
-          <animate attributeName="scale" dur="2.8s" values="32;52;38;32" repeatCount="indefinite"/>
-        </feDisplacementMap>
-        <feGaussianBlur stdDeviation="0.8"/>
-      </filter>
+  /* ===== Fire Footer (no images, no SVG, no JS) ===== */
+  .fire-footer {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: 160px;                 /* overall flame band height */
+    padding-top: 12px;             /* tiny top margin so tips don't crop */
+    pointer-events: none;          /* clicks pass through */
+    z-index: 9999;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    align-items: end;
+    gap: 6px;
+    contain: layout paint;
+  }
 
-      <!-- Soft glow for a subtle aura above the flames -->
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="10" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
+  /* Soft glow behind flames */
+  .fire-footer::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 16px;
+    background:
+      radial-gradient(ellipse at bottom,
+        rgba(255,140,0,0.45) 0%,
+        rgba(255,140,0,0.30) 35%,
+        rgba(255,200,0,0.18) 60%,
+        rgba(255,200,0,0) 100%);
+    filter: blur(14px);
+    animation: glow 3.2s ease-in-out infinite;
+  }
 
-    <!-- Top padding so the flame tips don't get cropped -->
-    <rect x="0" y="0" width="800" height="10" fill="transparent"/>
+  /* A single flame tongue */
+  .flame {
+    position: relative;
+    height: 90px;                  /* base height; variants below */
+    border-radius: 50% 50% 0 0;    /* round top, flat bottom */
+    background:
+      /* hot core that fades to transparent toward the tip */
+      radial-gradient(ellipse at 50% 10%,
+        rgba(255,255,200,0.95) 0%,
+        rgba(255,255,200,0) 60%) top/100% 72% no-repeat,
+      /* main body from red to amber to transparent */
+      linear-gradient(
+        to top,
+        rgba(244,67,54,0.95) 0%,
+        rgba(255,152,0,0.95) 60%,
+        rgba(255,235,59,0) 100%);
+    box-shadow:
+      0 6px 18px rgba(255,140,0,0.35),
+      0 0 22px rgba(255,200,0,0.18) inset;
+    transform-origin: 50% 100%;
+    animation:
+      lick 2.4s ease-in-out infinite,
+      sway 3.1s ease-in-out infinite;
+    will-change: transform, filter, opacity;
+  }
 
-    <!-- Glow halo (transparent toward top) -->
-    <rect x="0" y="10" width="800" height="70" fill="url(#flameGradient)" opacity="0.28" filter="url(#glow)"/>
+  /* Randomize durations a bit for natural chaos */
+  .flame:nth-child(odd)  { animation-duration: 2.2s, 2.9s; }
+  .flame:nth-child(3n)   { animation-duration: 2.8s, 3.6s; }
+  .flame:nth-child(4n)   { animation-duration: 2.0s, 3.0s; }
+  .flame:nth-child(5n)   { animation-duration: 2.6s, 3.8s; }
 
-    <!-- Flame layers for depth (transparent background overall) -->
-    <g filter="url(#flameWarp)">
-      <rect x="0" y="30" width="800" height="120" fill="url(#flameGradient)" opacity="0.95"/>
-      <rect x="0" y="50" width="800" height="100" fill="url(#flameGradient)" opacity="0.70"/>
-      <rect x="0" y="75" width="800" height="75"  fill="url(#flameGradient)" opacity="0.50"/>
-    </g>
-  </svg>
-</div>
+  /* Height variety (you can tweak these or add/remove flames) */
+  .f1  { height: 110px; } .f2  { height: 95px; }
+  .f3  { height: 125px; } .f4  { height: 85px; }
+  .f5  { height: 105px; } .f6  { height: 120px; }
+  .f7  { height: 92px;  } .f8  { height: 115px; }
+  .f9  { height: 100px; } .f10 { height: 130px; }
+  .f11 { height: 97px;  } .f12 { height: 118px; }
+  .f13 { height: 93px;  } .f14 { height: 112px; }
+
+  /* Vertical lick (stretch + rise) */
+  @keyframes lick {
+    0%, 100% { transform: translateY(0) scaleY(1); filter: blur(0.2px); }
+    25%      { transform: translateY(-6px) scaleY(1.06); filter: blur(0.5px); }
+    50%      { transform: translateY(-12px) scaleY(1.14); filter: blur(0.3px); }
+    75%      { transform: translateY(-4px) scaleY(1.03); filter: blur(0.4px); }
+  }
+
+  /* Horizontal sway (wind wobble) */
+  @keyframes sway {
+    0%   { transform: skewX(0deg) translateX(0); }
+    20%  { transform: skewX(2deg) translateX(2px); }
+    40%  { transform: skewX(-1.6deg) translateX(-2px); }
+    60%  { transform: skewX(1.4deg) translateX(1px); }
+    80%  { transform: skewX(-2deg) translateX(-1px); }
+    100% { transform: skewX(0deg) translateX(0); }
+  }
+
+  /* Breathing glow */
+  @keyframes glow {
+    0%, 100% { opacity: 0.38; transform: translateY(0); }
+    50%      { opacity: 0.55; transform: translateY(-4px); }
+  }
+
+  /* Accessibility: respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .flame, .fire-footer::before {
+      animation: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Pure CSS Fire Footer</h1>
+    <p>Background stays transparent; flames hug the bottom. Remove the &lt;main&gt; block in production if you like.</p>
+  </main>
+
+  <!-- 🔥 Fire Footer (transparent, with tiny top padding so tips don't crop) -->
+  <div class="fire-footer" aria-hidden="true">
+    <div class="flame f1"></div>
+    <div class="flame f2"></div>
+    <div class="flame f3"></div>
+    <div class="flame f4"></div>
+    <div class="flame f5"></div>
+    <div class="flame f6"></div>
+    <div class="flame f7"></div>
+    <div class="flame f8"></div>
+    <div class="flame f9"></div>
+    <div class="flame f10"></div>
+    <div class="flame f11"></div>
+    <div class="flame f12"></div>
+    <div class="flame f13"></div>
+    <div class="flame f14"></div>
+  </div>
+</body>
+</html>
