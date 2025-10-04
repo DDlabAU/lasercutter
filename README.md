@@ -271,7 +271,7 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
     W = container.clientWidth;
     H = container.clientHeight;
     gridW = Math.max(64, Math.floor(W / pixelSize));
-    gridH = Math.max(32, Math.floor(H / pixelSize)*0.7);
+    gridH = Math.max(32, Math.floor((H / pixelSize) * 0.7));
     canvas.width  = gridW;     // 1 canvas pixel = 1 fire cell (scaled via CSS)
     canvas.height = gridH;
     fire = new Array(gridW * gridH).fill(0);
