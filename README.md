@@ -214,217 +214,138 @@ En lille guide til indstilling af billeder vha. "Adjust Image" funktion, der gø
 Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus. 
 
 
-<!-- ===== Bottom Fire: steady + realistic (transparent) ===== -->
-<div class="bottom-fire" aria-hidden="true">
-  <canvas id="fireCanvas"></canvas>
-</div>
-
+<div id="pixel-fire" aria-hidden="true"></div>
 <style>
-  .bottom-fire {
-    position: fixed; /* stick to viewport bottom; change to absolute if needed in a container */
+  #pixel-fire {
+    position: fixed;
     left: 0; right: 0; bottom: 0;
-    height: 26vh;                 /* overall band height (tweak to taste) */
-    pointer-events: none;         /* clicks pass through */
-    z-index: 0;                   /* keep behind page content (raise if needed) */
-    background: transparent;
-    padding-top: 6vh;             /* safe margin so tips never touch/crop at top */
+    height: 100px;           /* fire band height on screen */
+    pointer-events: none;    /* don’t block clicks */
+    z-index: 9999;
+    mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
   }
-  #fireCanvas {
+  #pixel-fire canvas {
     width: 100%;
     height: 100%;
+    image-rendering: pixelated;   /* keep the chunky look */
+    image-rendering: crisp-edges;
     display: block;
   }
-  /* If content should appear over the fire: give it a higher stacking context
-     .content { position: relative; z-index: 1; } */
+
+  /* Respect reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    #pixel-fire { display: none; }
+  }
 </style>
-
 <script>
-/*
-  WebGL fire shader — smooth, constant rise (no harsh flicker), transparent background.
-  Uses fbm (fractal noise) + blackbody-ish ramp, with soft top fade (no cropping).
-*/
 (function () {
-  const canvas = document.getElementById('fireCanvas');
-  const gl = canvas.getContext('webgl', { premultipliedAlpha: true, alpha: true, antialias: false });
-  if (!gl) { console.warn('WebGL not available'); return; }
+  const container = document.getElementById('pixel-fire');
+  if (!container) return;
 
-  // Vertex shader (full-screen quad)
-  const vs = `
-    attribute vec2 a_pos;
-    varying vec2 v_uv;
-    void main() {
-      v_uv = a_pos * 0.5 + 0.5;
-      gl_Position = vec4(a_pos, 0.0, 1.0);
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
+  container.appendChild(canvas);
+
+  // Tunables
+  const pixelSize = 4;            // larger = chunkier pixels
+  const maxIntensity = 36;        // palette size (more = smoother gradient)
+  const cooling = 2;              // 0..3; bigger = faster decay
+  const wind = 1;                 // -2..2; negative = drift left, positive = right
+  const fpsCap = 60;              // simple FPS cap
+
+  let W = 0, H = 0, gridW = 0, gridH = 0, fire = [], palette = [];
+
+  function makePalette() {
+    palette = [];
+    for (let i = 0; i <= maxIntensity; i++) {
+      const t = i / maxIntensity;
+      // warm gradient: black -> deep red -> orange -> yellow -> white
+      const r = Math.min(255, Math.floor(255 * t));
+      const g = Math.min(255, Math.floor(170 * Math.pow(t, 1.2)));
+      const b = Math.min(255, Math.floor(30  * Math.pow(t, 2.0)));
+      palette.push([r, g, b, 255]);
     }
-  `;
-
-  // Fragment shader: fbm fire with constant upward flow and transparent background
-  const fs = `
-    precision highp float;
-    varying vec2 v_uv;
-    uniform vec2 u_res;
-    uniform float u_time;
-    uniform float u_aspect;
-    uniform float u_safeTop; // 0..1 padding at the top inside the band
-
-    // Hash / noise helpers
-    float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123); }
-    float noise(vec2 p) {
-      vec2 i = floor(p), f = fract(p);
-      float a = hash(i);
-      float b = hash(i + vec2(1.0,0.0));
-      float c = hash(i + vec2(0.0,1.0));
-      float d = hash(i + vec2(1.0,1.0));
-      vec2 u = f*f*(3.0-2.0*f);
-      return mix(mix(a,b,u.x), mix(c,d,u.x), u.y);
-    }
-    float fbm(vec2 p) {
-      float v = 0.0;
-      float amp = 0.5;
-      for (int i = 0; i < 5; i++) {
-        v += amp * noise(p);
-        p *= 2.02;
-        amp *= 0.53;
-      }
-      return v;
-    }
-
-    // Blackbody-ish color ramp (dark red -> orange -> yellow -> near-white)
-    vec3 fireRamp(float t) {
-      t = clamp(t, 0.0, 1.0);
-      // piecewise smooth ramp
-      vec3 col1 = vec3(0.05, 0.00, 0.00);   // deep red
-      vec3 col2 = vec3(0.70, 0.15, 0.00);   // hot red-orange
-      vec3 col3 = vec3(1.00, 0.55, 0.00);   // orange
-      vec3 col4 = vec3(1.00, 0.90, 0.30);   // yellow
-      vec3 col5 = vec3(1.00, 0.98, 0.85);   // near-white core
-      if (t < 0.25) return mix(col1, col2, smoothstep(0.00, 0.25, t));
-      if (t < 0.50) return mix(col2, col3, smoothstep(0.25, 0.50, t));
-      if (t < 0.75) return mix(col3, col4, smoothstep(0.50, 0.75, t));
-      return mix(col4, col5, smoothstep(0.75, 1.00, t));
-    }
-
-    void main() {
-      // Normalized coords: x stretched to preserve spherical flow horizontally
-      vec2 uv = v_uv;
-      uv.x *= u_aspect;
-
-      // Apply safe top margin (fire fades well before the top of the canvas)
-      float safeCut = smoothstep(1.0 - u_safeTop, 1.0, uv.y);
-
-      // Shape mask: flames originate near bottom and taper upward
-      float baseShape = 1.0 - smoothstep(0.0, 0.12, uv.y); // bright at very bottom
-      float taper = smoothstep(1.0, 0.40, uv.y);           // falloff to top
-      float shape = clamp(baseShape + taper, 0.0, 1.0);
-
-      // Constant upward flow (no strobe flicker): slide noise field up over time
-      float speed = 0.18; // overall rise speed
-      vec2 flow = vec2(0.0, -u_time * speed);
-
-      // Curl-like distortion for tongues of flame
-      float sway = 0.12 * sin(uv.y * 10.0 - u_time * 0.8);
-      vec2 p = vec2(uv.x * 1.6 + sway, uv.y * 2.2) + flow;
-
-      // fbm layers
-      float n  = fbm(p);
-      float n2 = fbm(p * vec2(1.6, 0.9) + vec2(0.0, -u_time*0.05));
-      float n3 = fbm(p * 0.7 + vec2(0.0, -u_time*0.02));
-
-      // Temperature/intensity model
-      float intensity = 0.0;
-      intensity += n * 0.8 + n2 * 0.5 + n3 * 0.3;
-      intensity *= shape;
-
-      // Hot core near the base (stable, not flickery)
-      float core = smoothstep(0.0, 0.25, 1.0 - uv.y) * 0.65;
-      intensity = clamp(intensity + core, 0.0, 1.4);
-
-      // Soft flicker-free smoothing
-      intensity = pow(intensity, 1.25);
-
-      // Color & alpha
-      vec3 col = fireRamp(intensity);
-      // Fade out near the very top and within the safe margin
-      float topFade = smoothstep(0.98, 0.70, uv.y);
-      float alpha = clamp(intensity * 1.15, 0.0, 1.0) * topFade * (1.0 - safeCut);
-
-      // Subtle emissive glow bias (keeps it constant, not pulsey)
-      float glow = smoothstep(0.0, 0.25, intensity) * 0.08;
-      gl_FragColor = vec4(col + glow, alpha);
-    }
-  `;
-
-  // Compile helpers
-  function compile(type, source) {
-    const s = gl.createShader(type);
-    gl.shaderSource(s, source);
-    gl.compileShader(s);
-    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
-      console.error(gl.getShaderInfoLog(s));
-      gl.deleteShader(s);
-      return null;
-    }
-    return s;
   }
-  const vsh = compile(gl.VERTEX_SHADER, vs);
-  const fsh = compile(gl.FRAGMENT_SHADER, fs);
 
-  const prog = gl.createProgram();
-  gl.attachShader(prog, vsh);
-  gl.attachShader(prog, fsh);
-  gl.linkProgram(prog);
-  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error(gl.getProgramInfoLog(prog));
-  }
-  gl.useProgram(prog);
-
-  // Full-screen quad
-  const quad = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, quad);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-    -1,-1,  1,-1,  -1, 1,
-     1,-1,  1, 1,  -1, 1
-  ]), gl.STATIC_DRAW);
-  const a_pos = gl.getAttribLocation(prog, 'a_pos');
-  gl.enableVertexAttribArray(a_pos);
-  gl.vertexAttribPointer(a_pos, 2, gl.FLOAT, false, 0, 0);
-
-  // Uniforms
-  const u_res     = gl.getUniformLocation(prog, 'u_res');
-  const u_time    = gl.getUniformLocation(prog, 'u_time');
-  const u_aspect  = gl.getUniformLocation(prog, 'u_aspect');
-  const u_safeTop = gl.getUniformLocation(prog, 'u_safeTop');
-
-  // Resize to device pixels for crisp edges
   function resize() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const rect = canvas.getBoundingClientRect();
-    const w = Math.max(2, Math.floor(rect.width * dpr));
-    const h = Math.max(2, Math.floor(rect.height * dpr));
-    if (canvas.width !== w || canvas.height !== h) {
-      canvas.width = w; canvas.height = h;
-      gl.viewport(0, 0, w, h);
-      gl.uniform2f(u_res, w, h);
-      gl.uniform1f(u_aspect, w / Math.max(h, 1));
+    W = container.clientWidth;
+    H = container.clientHeight;
+    gridW = Math.max(64, Math.floor(W / pixelSize));
+    gridH = Math.max(32, Math.floor(H / pixelSize));
+    canvas.width  = gridW;     // 1 canvas pixel = 1 fire cell (scaled via CSS)
+    canvas.height = gridH;
+    fire = new Array(gridW * gridH).fill(0);
+    // Set bottom row as heat source
+    for (let x = 0; x < gridW; x++) fire[(gridH - 1) * gridW + x] = maxIntensity;
+  }
+
+  function idx(x, y) { return y * gridW + x; }
+
+  function step() {
+    // propagate from bottom-2 up to top
+    for (let y = 0; y < gridH - 1; y++) {
+      for (let x = 0; x < gridW; x++) {
+        const below = idx((x), y + 1);
+        // random decay + a little turbulence
+        const decay = (Math.random() * (cooling + 1)) | 0;
+        let newI = fire[below] - decay;
+        if (newI < 0) newI = 0;
+
+        // wind drift
+        const drift = ((Math.random() * 3) | 0) - 1 + wind; // -2..2
+        const nx = (x + drift + gridW) % gridW;
+        fire[idx(nx, y)] = newI;
+      }
+    }
+
+    // occasionally reheat the bottom (to avoid “cooling out”)
+    for (let x = 0; x < gridW; x++) {
+      const base = idx(x, gridH - 1);
+      // jitter base intensity a bit for flicker
+      fire[base] = Math.max(
+        0,
+        Math.min(maxIntensity, maxIntensity - ((Math.random() * 3) | 0))
+      );
     }
   }
-  resize();
-  window.addEventListener('resize', resize);
 
-  // Animation (steady flow; no amplitude modulation => "constant")
-  const start = performance.now();
-  function frame(tNow) {
-    resize();
-    const t = (tNow - start) * 0.001;
-    gl.uniform1f(u_time, t);
-    gl.uniform1f(u_safeTop, Math.max(0.0, Math.min(1.0, (parseFloat(getComputedStyle(document.querySelector('.bottom-fire')).paddingTop) || 0) / canvas.clientHeight)));
-    gl.clearColor(0,0,0,0); // transparent
-    gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
-    requestAnimationFrame(frame);
+  function draw() {
+    const img = ctx.getImageData(0, 0, gridW, gridH);
+    const data = img.data;
+    for (let i = 0; i < fire.length; i++) {
+      const c = palette[fire[i]];
+      const off = i * 4;
+      data[off]     = c[0];
+      data[off + 1] = c[1];
+      data[off + 2] = c[2];
+      data[off + 3] = 220; // slight transparency so it blends with page
+    }
+    ctx.putImageData(img, 0, 0);
   }
-  requestAnimationFrame(frame);
+
+  // Basic rAF loop with fps cap
+  let last = 0;
+  function loop(ts) {
+    if (ts - last > 1000 / fpsCap) {
+      step();
+      draw();
+      last = ts;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  // Init
+  makePalette();
+  resize();
+  requestAnimationFrame(loop);
+
+  // Debounced resize
+  let rAF = null;
+  window.addEventListener('resize', () => {
+    if (rAF) cancelAnimationFrame(rAF);
+    rAF = requestAnimationFrame(() => {
+      resize();
+    });
+  });
 })();
 </script>
-<!-- ===== /Bottom Fire ===== -->
-
