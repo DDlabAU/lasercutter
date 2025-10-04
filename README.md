@@ -311,23 +311,20 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
     }
   }
 
-function draw() {
-  ctx.clearRect(0, 0, gridW, gridH);   // transparent clear
-  const img = ctx.getImageData(0, 0, gridW, gridH);
-  const data = img.data;
-  for (let i = 0; i < fire.length; i++) {
-    const c = palette[fire[i]];
-    const off = i * 4;
-    data[off]     = c[0];
-    data[off + 1] = c[1];
-    data[off + 2] = c[2];
-    data[off + 3] = 220; // alpha, keep >0 so flames are visible
-  }
-  ctx.putImageData(img, 0, 0);
+  function draw() {
+    const img = ctx.getImageData(0, 0, gridW, gridH);
+    const data = img.data;
+    for (let i = 0; i < fire.length; i++) {
+      const c = palette[fire[i]];
+      const off = i * 4;
+if (fire[i] === 0) {
+  data[off + 3] = 0; // fully transparent when “no fire”
+} else {
+  data[off]     = c[0];
+  data[off + 1] = c[1];
+  data[off + 2] = c[2];
+  data[off + 3] = 255; // fully opaque flame pixel
 }
-
-    ctx.putImageData(img, 0, 0);
-  }
 
   // Basic rAF loop with fps cap
   let last = 0;
