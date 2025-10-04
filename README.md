@@ -215,236 +215,106 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
 
 
 
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Bottom Fire</title>
+<!-- ===== Bottom Fire (transparent background) ===== -->
+<div class="fireband" aria-hidden="true">
+  <svg class="fire-svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+    <defs>
+      <!-- Soft vertical fade so tips don't crop at the top of the band -->
+      <linearGradient id="fadeMask" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="white"/>
+        <stop offset="70%" stop-color="white"/>
+        <stop offset="100%" stop-color="black"/>
+      </linearGradient>
+      <mask id="softCut">
+        <rect width="100%" height="100%" fill="url(#fadeMask)"/>
+      </mask>
+
+      <!-- Flame color ramps (warm core + outer glow) -->
+      <linearGradient id="flameGrad1" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%"   stop-color="rgba(255,120,0,0.00)"/>
+        <stop offset="30%"  stop-color="rgba(255,120,0,0.55)"/>
+        <stop offset="55%"  stop-color="rgba(255,160,0,0.85)"/>
+        <stop offset="85%"  stop-color="rgba(255,220,120,0.95)"/>
+        <stop offset="100%" stop-color="rgba(255,255,220,0.00)"/>
+      </linearGradient>
+      <linearGradient id="flameGrad2" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%"   stop-color="rgba(255,80,0,0.00)"/>
+        <stop offset="35%"  stop-color="rgba(255,80,0,0.35)"/>
+        <stop offset="60%"  stop-color="rgba(255,120,0,0.65)"/>
+        <stop offset="90%"  stop-color="rgba(255,240,200,0.85)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0.00)"/>
+      </linearGradient>
+      <radialGradient id="embersGrad" cx="50%" cy="90%" r="70%">
+        <stop offset="0%"   stop-color="rgba(255,180,0,0.35)"/>
+        <stop offset="60%"  stop-color="rgba(255,120,0,0.10)"/>
+        <stop offset="100%" stop-color="rgba(255,80,0,0.00)"/>
+      </radialGradient>
+
+      <!-- Wavy displacement fields (animated turbulence) -->
+      <filter id="wobble1" x="-50%" y="-200%" width="200%" height="400%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.25" numOctaves="3" seed="7" result="turb">
+          <animate attributeName="baseFrequency" dur="6s" values="0.015 0.25; 0.020 0.30; 0.012 0.22; 0.015 0.25" repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="turb" scale="45" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+
+      <filter id="wobble2" x="-50%" y="-200%" width="200%" height="400%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="23" result="turb2">
+          <animate attributeName="baseFrequency" dur="4.5s" values="0.02 0.35; 0.028 0.45; 0.016 0.28; 0.02 0.35" repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="turb2" scale="30" xChannelSelector="G" yChannelSelector="B"/>
+      </filter>
+
+      <!-- Gentle vertical shimmer for heat -->
+      <filter id="heatShimmer" x="-50%" y="-200%" width="200%" height="400%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.003 0.6" numOctaves="2" seed="99" result="noise">
+          <animate attributeName="baseFrequency" dur="7s" values="0.003 0.6; 0.004 0.7; 0.0025 0.5; 0.003 0.6" repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+
+    <!-- Emissive bed/glow -->
+    <rect x="0" y="120" width="1000" height="180" fill="url(#embersGrad)" opacity="0.7" mask="url(#softCut)"/>
+
+    <!-- Core flame body (two layers for depth) -->
+    <g mask="url(#softCut)">
+      <rect x="-50" y="30" width="1100" height="260" fill="url(#flameGrad1)" filter="url(#wobble1)"/>
+      <rect x="-50" y="10" width="1100" height="260" fill="url(#flameGrad2)" filter="url(#wobble2)"/>
+    </g>
+
+    <!-- Subtle rising heat haze over everything -->
+    <g filter="url(#heatShimmer)" opacity="0.6" mask="url(#softCut)">
+      <rect x="-50" y="0" width="1100" height="300" fill="transparent"/>
+    </g>
+  </svg>
+</div>
+
 <style>
-  :root{
-    /* Tweak this to add "headroom" above the flames so they don't crop */
-    --fire-top-margin: 56px;      /* margin inside the fire strip */
-    --fire-height: 240px;         /* overall strip height */
-    --flame-count: 70;            /* visual density */
-    --ember-count: 45;
-    --bg: #0b0f1a;
-  }
-
-  /* Page baseline */
-  html, body {
-    height: 100%;
-    margin: 0;
-    background: radial-gradient(1200px 600px at 50% 100%, #151d2b 0 35%, var(--bg) 75%);
-    color: #e6ecff;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
-
-  main{
-    min-height: 100%;
-    display: grid;
-    place-items: center;
-    padding-bottom: var(--fire-height); /* keep content above the fire */
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  /* The fire strip sticks to the bottom and provides internal top "margin" */
-  .fire-strip{
-    position: fixed;
+  /* Position the fire band at the bottom, fully transparent behind content */
+  .fireband {
+    position: fixed; /* stick to bottom of viewport; change to absolute inside a container if you prefer */
     left: 0;
     right: 0;
     bottom: 0;
-    height: var(--fire-height);
-    padding-top: var(--fire-top-margin); /* <- headroom to avoid cropping */
-    overflow: visible;                   /* allow tall flames to breathe */
-    pointer-events: none;                /* don't block clicks on page */
-    /* subtle heat glow behind flames */
-    background:
-      radial-gradient(60% 120% at 50% 100%,
-        rgba(255,120,40,.18) 0%,
-        rgba(200,40,0,.07) 50%,
-        rgba(0,0,0,0) 70%)
-      0 0 / 100% 100% no-repeat;
+    height: 28vh;            /* overall fire height */
+    pointer-events: none;    /* let clicks pass through */
+    z-index: 0;              /* keep behind other content unless you raise it */
+    background: transparent; /* ensure page background shows through */
+    /* Safe margin: keeps flame tips away from the top edge of this band to avoid cropping */
+    --flame-safe-top: 6vh;   /* tweak this to increase/decrease headroom */
+    padding-top: var(--flame-safe-top);
+    /* Optional: add side padding if your layout has gutters */
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  /* Ground / charcoal at the base */
-  .bed{
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 44px;
-    background:
-      radial-gradient(80px 30px at 10% 50%, rgba(250,180,60,.7), transparent 70%),
-      radial-gradient(120px 40px at 45% 40%, rgba(255,140,40,.5), transparent 70%),
-      radial-gradient(100px 34px at 80% 60%, rgba(255,210,120,.45), transparent 70%),
-      linear-gradient(#2a1a14, #100a08 70%);
-    filter: blur(0.3px) contrast(1.05);
-    box-shadow: 0 -4px 24px rgba(255,120,40,.25) inset;
+  .fire-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
-  /* Container for animated pieces */
-  .flames, .embers{
-    position: absolute;
-    left: 0; right: 0;
-    bottom: 44px; /* sit on the bed */
-    height: calc(100% - 44px - var(--fire-top-margin));
-    overflow: visible;
-  }
-
-  /* Individual flame */
-  .flame{
-    position: absolute;
-    bottom: 0;
-    width: 36px;
-    height: 110px;
-    transform-origin: 50% 100%;
-    /* layered radial gradients to suggest a hot core and cooler shell */
-    background:
-      radial-gradient(ellipse at 50% 75%, #fff7b0 0 18%, rgba(255,230,120,.9) 18% 30%, transparent 31%),
-      radial-gradient(ellipse at 50% 85%, #ffd37a 0 35%, #ff9a3a 36% 56%, #ff5a00 57% 75%, transparent 76%);
-    border-radius: 50% 50% 45% 45% / 70% 70% 30% 30%;
-    mix-blend-mode: screen;
-    filter: blur(0.15px) saturate(1.15);
-    opacity: .92;
-    animation:
-      rise var(--rise, 2.6s) linear infinite,
-      sway var(--sway, 1.9s) ease-in-out infinite alternate,
-      flicker var(--flicker, 120ms) steps(2,end) infinite;
-  }
-
-  /* Tiny hot sparks */
-  .ember{
-    position: absolute;
-    bottom: 10px;
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #ffebb0 0 35%, #ffcd55 36% 60%, rgba(255,120,0,.8) 61% 100%);
-    box-shadow:
-      0 0 8px rgba(255,160,60,.75),
-      0 0 14px rgba(255,120,40,.45);
-    opacity: .85;
-    animation:
-      ember-rise var(--e-rise, 2.8s) linear infinite,
-      ember-drift var(--e-drift, 2.2s) ease-in-out infinite alternate,
-      ember-fade var(--e-fade, 2.8s) ease-in infinite;
-    mix-blend-mode: screen;
-  }
-
-  /* Keyframes */
-  @keyframes rise{
-    0%   { transform: translateY(0) scaleY(1) scaleX(1); opacity: .95; }
-    70%  { opacity: .9; }
-    100% { transform: translateY(-105%) scaleY(1.3) scaleX(.85); opacity: 0; }
-  }
-  @keyframes sway{
-    from { transform: translateY(var(--ty,0)) translateX(-8px) scaleY(1.1) rotate(-2.5deg); }
-    to   { transform: translateY(var(--ty,0)) translateX(8px)  scaleY(1.05) rotate(2.5deg); }
-  }
-  @keyframes flicker{
-    50% { filter: blur(0.35px) brightness(1.05); }
-  }
-
-  @keyframes ember-rise{
-    0%   { transform: translateY(0) scale(1); }
-    100% { transform: translateY(-140%) scale(0.9); }
-  }
-  @keyframes ember-drift{
-    from { transform: translateX(-18px); }
-    to   { transform: translateX(22px); }
-  }
-  @keyframes ember-fade{
-    0%   { opacity: .95; }
-    80%  { opacity: .55; }
-    100% { opacity: 0; }
-  }
-
-  /* Nice little performance bump */
-  .flame, .ember { will-change: transform, opacity, filter; }
-
-  /* Optional: responsive tuning */
-  @media (max-width: 640px){
-    :root{
-      --fire-height: 200px;
-      --fire-top-margin: 44px;
-    }
-    .flame{ width: 28px; height: 92px; }
-  }
 </style>
-</head>
-<body>
-  <main>
-    <div>
-      <h1>Bottom Fire Demo</h1>
-      <p>Replace this content with your page. The fire stays at the bottom.</p>
-    </div>
-  </main>
+<!-- ===== /Bottom Fire ===== -->
 
-  <div class="fire-strip" aria-hidden="true">
-    <div class="flames" id="flames"></div>
-    <div class="embers" id="embers"></div>
-    <div class="bed"></div>
-  </div>
-
-<script>
-  // Plain, tiny helper to populate flames/embers with variety
-  (function makeFire(){
-    const flames = document.getElementById('flames');
-    const embers = document.getElementById('embers');
-    const W = window.innerWidth;
-
-    const FLAMES = 70;   // matches --flame-count
-    const EMBERS = 45;   // matches --ember-count
-
-    for(let i=0;i<FLAMES;i++){
-      const f = document.createElement('span');
-      f.className = 'flame';
-
-      // Distribute across width with a little clustering
-      const x = (i/(FLAMES-1)) * (W + 80) - 40 + (Math.random()*60 - 30);
-      const delay = -(Math.random()*2.6).toFixed(2) + 's';
-      const rise  = (2.2 + Math.random()*1.2).toFixed(2) + 's';
-      const sway  = (1.6 + Math.random()*1.2).toFixed(2) + 's';
-      const flick = (80 + Math.random()*120|0) + 'ms';
-      const h    = 90 + Math.random()*70;      // flame height
-      const w    = 26 + Math.random()*22;      // flame width
-      const o    = 0.75 + Math.random()*0.25;  // opacity variation
-
-      f.style.left = x + 'px';
-      f.style.height = h + 'px';
-      f.style.width  = w + 'px';
-      f.style.opacity = o.toFixed(2);
-      f.style.setProperty('--rise', rise);
-      f.style.setProperty('--sway', sway);
-      f.style.setProperty('--flicker', flick);
-      f.style.animationDelay = delay;
-
-      flames.appendChild(f);
-    }
-
-    for(let i=0;i<EMBERS;i++){
-      const e = document.createElement('i');
-      e.className = 'ember';
-      const x = Math.random()*W;
-      const delay = -(Math.random()*2.8).toFixed(2) + 's';
-      const rise  = (2.2 + Math.random()*1.6).toFixed(2) + 's';
-      const drift = (1.6 + Math.random()*1.6).toFixed(2) + 's';
-
-      e.style.left = x + 'px';
-      e.style.setProperty('--e-rise', rise);
-      e.style.setProperty('--e-drift', drift);
-      e.style.setProperty('--e-fade', rise);
-      e.style.animationDelay = delay;
-
-      embers.appendChild(e);
-    }
-
-    // Keep distribution sane on resize (simple approach)
-    window.addEventListener('resize', () => {
-      flames.innerHTML = '';
-      embers.innerHTML = '';
-      makeFire();
-    }, { once: true });
-  })();
-</script>
-</body>
-</html>
