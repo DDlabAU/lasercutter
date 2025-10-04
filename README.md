@@ -214,143 +214,59 @@ En lille guide til indstilling af billeder vha. "Adjust Image" funktion, der gø
 Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus. 
 
 
-<div id="pixel-fire" aria-hidden="true"></div>
-<style>
-  #pixel-fire {
-    position: fixed;
-    left: 0; right: 0; bottom: 0;
-    height: 140px;           /* fire band height on screen */
-    pointer-events: none;    /* don’t block clicks */
-    z-index: 9999;
-    mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
-  }
-  #pixel-fire canvas {
-    width: 100%;
-    height: 100%;
-    image-rendering: pixelated;   /* keep the chunky look */
-    image-rendering: crisp-edges;
-    display: block;
-  }
 
-  /* Respect reduced-motion */
-  @media (prefers-reduced-motion: reduce) {
-    #pixel-fire { display: none; }
-  }
-</style>
-<script>
-(function () {
-  const container = document.getElementById('pixel-fire');
-  if (!container) return;
+<div align="center">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="Animated fire footer"
+    viewBox="0 0 800 160"
+    width="100%"
+    height="140"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <!-- Warm gradient for the flame body -->
+      <linearGradient id="flameGradient" x1="0" x2="0" y1="1" y2="0">
+        <stop offset="0%" stop-color="#f44336" stop-opacity="0.95"/>
+        <stop offset="55%" stop-color="#ff9800" stop-opacity="0.95"/>
+        <stop offset="92%" stop-color="#fff176" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#fff176" stop-opacity="0"/>
+      </linearGradient>
 
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d', { willReadFrequently: true });
-  container.appendChild(canvas);
+      <!-- Noise-based distortion to create flicker and wavy tongues -->
+      <filter id="flameWarp" x="-20%" y="-30%" width="140%" height="180%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="4" result="noise">
+          <animate attributeName="baseFrequency" dur="3.5s" values="0.018;0.028;0.022;0.018" repeatCount="indefinite"/>
+          <animate attributeName="seed" dur="4s" values="4;7;10;4" repeatCount="indefinite"/>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="42" xChannelSelector="R" yChannelSelector="G">
+          <animate attributeName="scale" dur="2.8s" values="32;52;38;32" repeatCount="indefinite"/>
+        </feDisplacementMap>
+        <feGaussianBlur stdDeviation="0.8"/>
+      </filter>
 
-  // Tunables
-  const pixelSize = 4;            // larger = chunkier pixels
-  const maxIntensity = 36;        // palette size (more = smoother gradient)
-  const cooling = 2;              // 0..3; bigger = faster decay
-  const wind = 1;                 // -2..2; negative = drift left, positive = right
-  const fpsCap = 60;              // simple FPS cap
+      <!-- Soft glow for a subtle aura above the flames -->
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="10" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
 
-  let W = 0, H = 0, gridW = 0, gridH = 0, fire = [], palette = [];
+    <!-- Top padding so the flame tips don't get cropped -->
+    <rect x="0" y="0" width="800" height="10" fill="transparent"/>
 
-  function makePalette() {
-    palette = [];
-    for (let i = 0; i <= maxIntensity; i++) {
-      const t = i / maxIntensity;
-      // warm gradient: black -> deep red -> orange -> yellow -> white
-      const r = Math.min(255, Math.floor(255 * t));
-      const g = Math.min(255, Math.floor(170 * Math.pow(t, 1.2)));
-      const b = Math.min(255, Math.floor(30  * Math.pow(t, 2.0)));
-      palette.push([r, g, b, 255]);
-    }
-  }
+    <!-- Glow halo (transparent toward top) -->
+    <rect x="0" y="10" width="800" height="70" fill="url(#flameGradient)" opacity="0.28" filter="url(#glow)"/>
 
-  function resize() {
-    W = container.clientWidth;
-    H = container.clientHeight;
-    gridW = Math.max(64, Math.floor(W / pixelSize));
-    gridH = Math.max(32, Math.floor((H / pixelSize) * 0.7));
-    canvas.width  = gridW;     // 1 canvas pixel = 1 fire cell (scaled via CSS)
-    canvas.height = gridH;
-    fire = new Array(gridW * gridH).fill(0);
-    // Set bottom row as heat source
-    for (let x = 0; x < gridW; x++) fire[(gridH - 1) * gridW + x] = maxIntensity;
-  }
-
-  function idx(x, y) { return y * gridW + x; }
-
-  function step() {
-    // propagate from bottom-2 up to top
-    for (let y = 0; y < gridH - 1; y++) {
-      for (let x = 0; x < gridW; x++) {
-        const below = idx((x), y + 1);
-        // random decay + a little turbulence
-        const decay = (Math.random() * (cooling + 1)) | 0;
-        let newI = fire[below] - decay;
-        if (newI < 0) newI = 0;
-
-        // wind drift
-        const drift = ((Math.random() * 3) | 0) - 1 + wind; // -2..2
-        const nx = (x + drift + gridW) % gridW;
-        fire[idx(nx, y)] = newI;
-      }
-    }
-
-    // occasionally reheat the bottom (to avoid “cooling out”)
-    for (let x = 0; x < gridW; x++) {
-      const base = idx(x, gridH - 1);
-      // jitter base intensity a bit for flicker
-      fire[base] = Math.max(
-        0,
-        Math.min(maxIntensity, maxIntensity - ((Math.random() * 3) | 0))
-      );
-    }
-  }
-
-  function draw() {
-    const img = ctx.getImageData(0, 0, gridW, gridH);
-    const data = img.data;
-    for (let i = 0; i < fire.length; i++) {
-      const c = palette[fire[i]];
-      const off = i * 4;
-if (fire[i] === 0) {
-  data[off + 3] = 0; // fully transparent when “no fire”
-} else {
-  data[off]     = c[0];
-  data[off + 1] = c[1];
-  data[off + 2] = c[2];
-  data[off + 3] = 255; // fully opaque flame pixel
-}
-
-    }
-    ctx.putImageData(img, 0, 0);
-  }
-
-  // Basic rAF loop with fps cap
-  let last = 0;
-  function loop(ts) {
-    if (ts - last > 1000 / fpsCap) {
-      step();
-      draw();
-      last = ts;
-    }
-    requestAnimationFrame(loop);
-  }
-
-  // Init
-  makePalette();
-  resize();
-  requestAnimationFrame(loop);
-
-  // Debounced resize
-  let rAF = null;
-  window.addEventListener('resize', () => {
-    if (rAF) cancelAnimationFrame(rAF);
-    rAF = requestAnimationFrame(() => {
-      resize();
-    });
-  });
-})();
-</script>
+    <!-- Flame layers for depth (transparent background overall) -->
+    <g filter="url(#flameWarp)">
+      <rect x="0" y="30" width="800" height="120" fill="url(#flameGradient)" opacity="0.95"/>
+      <rect x="0" y="50" width="800" height="100" fill="url(#flameGradient)" opacity="0.70"/>
+      <rect x="0" y="75" width="800" height="75"  fill="url(#flameGradient)" opacity="0.50"/>
+    </g>
+  </svg>
+</div>
