@@ -220,6 +220,8 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
     position: fixed;
     left: 0; right: 0; bottom: 0;
     height: 100px;           /* fire band height on screen */
+    padding-top: 40px; /* moves the fire down, leaving margin at the top */
+    box-sizing: border-box;
     pointer-events: none;    /* don’t block clicks */
     z-index: 9999;
     mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
@@ -309,17 +311,21 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
     }
   }
 
-  function draw() {
-    const img = ctx.getImageData(0, 0, gridW, gridH);
-    const data = img.data;
-    for (let i = 0; i < fire.length; i++) {
-      const c = palette[fire[i]];
-      const off = i * 4;
-      data[off]     = c[0];
-      data[off + 1] = c[1];
-      data[off + 2] = c[2];
-      data[off + 3] = 220; // slight transparency so it blends with page
-    }
+function draw() {
+  ctx.clearRect(0, 0, gridW, gridH);   // transparent clear
+  const img = ctx.getImageData(0, 0, gridW, gridH);
+  const data = img.data;
+  for (let i = 0; i < fire.length; i++) {
+    const c = palette[fire[i]];
+    const off = i * 4;
+    data[off]     = c[0];
+    data[off + 1] = c[1];
+    data[off + 2] = c[2];
+    data[off + 3] = 220; // alpha, keep >0 so flames are visible
+  }
+  ctx.putImageData(img, 0, 0);
+}
+
     ctx.putImageData(img, 0, 0);
   }
 
