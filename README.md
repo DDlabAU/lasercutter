@@ -214,14 +214,13 @@ En lille guide til indstilling af billeder vha. "Adjust Image" funktion, der gø
 Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus. 
 
 
+<!-- Pixel Fire: drop near the end of <body> -->
 <div id="pixel-fire" aria-hidden="true"></div>
 <style>
   #pixel-fire {
     position: fixed;
     left: 0; right: 0; bottom: 0;
-    height: 100px;           /* fire band height on screen */
-    padding-top: 40px; /* moves the fire down, leaving margin at the top */
-    box-sizing: border-box;
+    height: 140px;           /* fire band height on screen */
     pointer-events: none;    /* don’t block clicks */
     z-index: 9999;
     mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
@@ -325,6 +324,10 @@ if (fire[i] === 0) {
   data[off + 2] = c[2];
   data[off + 3] = 255; // fully opaque flame pixel
 }
+
+    }
+    ctx.putImageData(img, 0, 0);
+  }
 
   // Basic rAF loop with fps cap
   let last = 0;
