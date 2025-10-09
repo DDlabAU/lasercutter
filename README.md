@@ -213,14 +213,17 @@ En lille guide til indstilling af billeder vha. "Adjust Image" funktion, der gø
 
 Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus. 
 
+<br>
+<br>
+
 
 <div id="pixel-fire" aria-hidden="true"></div>
 <style>
   #pixel-fire {
     position: fixed;
     left: 0; right: 0; bottom: 0;
-    height: 220px;           /* fire band height on screen */
-    padding-top: 30px; 
+    height: 170px;           /* fire band height on screen */
+    padding-top: 40px; 
     pointer-events: none;    /* don’t block clicks */
     z-index: 9999;
     mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
