@@ -222,15 +222,15 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
   #pixel-fire {
     position: fixed;
     left: 0; right: 0; bottom: 0;
-    height: 100px;           /* fire band height on screen */
-    padding-top: 40px; 
+    height: 200px;           /* fire band height on screen */
+    padding-top: 30px; 
     pointer-events: none;    /* don’t block clicks */
     z-index: 9999;
     mix-blend-mode: normal;  /* change to 'screen' to glow on dark pages */
   }
   #pixel-fire canvas {
     width: 100%;
-    height: 100%;
+    height: 90%;
     image-rendering: pixelated;   /* keep the chunky look */
     image-rendering: crisp-edges;
     display: block;
