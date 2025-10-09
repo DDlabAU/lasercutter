@@ -215,6 +215,7 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
 
 <br>
 <br>
+<br>
 
 
 <div id="pixel-fire" aria-hidden="true"></div>
@@ -230,7 +231,7 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
   }
   #pixel-fire canvas {
     width: 100%;
-    height: 90%;
+    height: 100%;
     image-rendering: pixelated;   /* keep the chunky look */
     image-rendering: crisp-edges;
     display: block;
