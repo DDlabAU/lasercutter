@@ -217,14 +217,11 @@ Guldkorn for alle - et must for dem der har været igennem et kørekort-kursus.
 <br>
 <br>
 
-<style>
-body {
-  cursor: url("ild.gif"), auto;
-}
-</style>
-
 <div id="pixel-fire" aria-hidden="true"></div>
 <style>
+  body {
+  cursor: url("ild.gif"), auto;
+}
   #pixel-fire {
     position: fixed;
     left: 0; right: 0; bottom: 0;
