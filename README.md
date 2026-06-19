@@ -42,7 +42,7 @@ Inden du går i gang, er her et par ting, der er smarte at huske på:
 
 [Lightburns officielle guide](https://docs.lightburnsoftware.com/Guides/Migration.html)
 
-For at have den mest optimale version af Lightburn, kan du installere en sammenfattet profil med alle vores instillinger (Kræver version 1.6 eller nyere) :
+For at have den mest optimale version af Lightburn, kan du installere en sammenfattet profil med alle vores indstillinger (Kræver version 1.6 eller nyere) :
 [LightBurn Indstillinger](https://github.com/DDlabAU/lasercutter/blob/master/Laser%20Profile%20Export.lbzip)
 Denne profil inkluderer bl.a. _material library_, som består af forskellige skæreindstillinger til alle tilladte materialer. 
 
@@ -89,7 +89,7 @@ Det eneste krav til filer der skal skæres er at de kan åbnes af programmet Lig
 #### Tegn din fil direkte i lightburn
 
 Der er installeret lightburn på computeren ved lasercutteren. Som udgangspunkt skal den kun bruges til at 'kommunikere' med lasercutteren og til mindre rettelser og justeringer af design. Der forventes at man har gjort designet klar hjemmefra - dvs. tegn den på din egen pc.  
-Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
+Du kan hente en _[prøve-version af lightburn](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)_ og tegne din fil hjemmefra. Hvis din prøve-periode er udløbet, kan du kontakte en ansat i labbet for at få adgang til en licens.
 
 <br>
 <br>
@@ -162,7 +162,7 @@ Hvis du skal gravere en eller flere linjer kan du bruge `Engrave line` indstilli
 
 - Du MÅ ikke forlade rummet mens maskinen er i gang (i labbets bemandingstid skal du informere den ansatte, hvis du skal forlade maskinen)
 - Du MÅ ikke skære medbragt materiale uden at have spurgt om vurdering og tilladelse.
-- Du MÅ ikke justere på laser-styrken for cut og engrave. Brug de tilpassede pre-sets. 
+- Du MÅ ikke justere på laser-styrken for cut og engrave. Brug de tilpassede presets. 
 
 I rummet hvor lasercutteren står er der flere dyre og farlige maskiner. Opfør dig derfor forsigtigt og med respekt for maskinerne.
 
@@ -187,7 +187,7 @@ Det er kun DDLab-ansatte der må foretage vedligeholdelse af maskinen. Du bør d
 <br>
 ## Nyttige Links + Guides
 
-Hvis du skal bruge en kasse til din elektronik eller i forbindelse med dit projekt, så kan du bruge en online service til at generere tegningerne, så du ikke selv behøver at lave dem fra bunden. Du kan så efterfølgende rette tegningerne til i f.eks. Illustratur, Inkscape eller Lightburn. Vi har to favoritter som du kan prøve:
+Hvis du skal bruge en kasse til din elektronik eller i forbindelse med dit projekt, så kan du bruge en online service til at generere tegningerne, så du ikke selv behøver at lave dem fra bunden. Du kan så efterfølgende rette tegningerne til i f.eks. Illustrator, Inkscape eller Lightburn. Vi har to favoritter som du kan prøve:
 
 - [Boxes.py](https://www.festi.info/boxes.py/)
 - [Makercase](http://www.makercase.com/)
